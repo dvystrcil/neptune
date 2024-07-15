@@ -67,9 +67,14 @@ z_offset: 1.0
 #i2c_address:
 i2c_mcu: eddy
 i2c_bus: i2c0f
-x_offset: -24.25
-y_offset: 20.45
+# x_offset: -24.25
+# y_offset: 20.45
+# new Probe values:
+#Eddy 0Deg x=-36.16 y=31.66
+x_offset: -36.16
+y_offset: 31.66
 data_rate: 500
+
 
 [temperature_probe btt_eddy]
 sensor_type: Generic 3950
