@@ -120,23 +120,17 @@ z_hop_speed: 25
 #fade_end:30.0  
 
 [screws_tilt_adjust]
-screw1: 184,140
-screw1_name: bed center
-screw2: 59,4
-screw2_name: front left screw
-screw3: 59,135
-screw3_name: middle left screw
-screw4: 59,270
-screw4_name: back left screw
-screw5: 314,270
-screw5_name: rear right screw
-screw6: 314, 135
-screw6_name: middle right screw
-screw7: 314,4
-screw7_name: front right screw
+screw1_name: front left screw
+screw1: 55,10
+screw2_name: rear left screw
+screw2: 55,180
+screw3_name: rear right screw
+screw3: 225,180
+screw4_name: front right screw
+screw4: 225,10
 horizontal_move_z: 10
 speed: 200
-screw_thread: CW-M4 # Use CW for Clowise and CCW for Counter Clockwise
+screw_thread: CW-M4  # Use CW for Clockwise and CCW for Counter Clockwise
 ```
 This is correct for plus, using the other configurations as a base, you can copy or derive the correct values for mesh_min/max etc ...
 Once you have switched branches, the "virtual mcu" (which is a linux process), must be recompiled using the normal make flash workflow, you may either go through menuconfig and configure the linux process build (and document how to do this), or you may use the virtualmcu.config from the ON project (and document how to do that) ...
