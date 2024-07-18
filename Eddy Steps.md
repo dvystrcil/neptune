@@ -20,7 +20,7 @@
   - `git fetch n4.moonraker`
   - `git reset --hard`
   - `git checkout n4/master`
-  - Commment `deb http://deb.debian.org/debian buster-backports main contrib non-free` in `/etc/apt/sources.list`
+  - Replace `deb http://deb.debian.org/debian buster-backports main contrib non-free` in `/etc/apt/sources.list` with `deb http://archive.debian.org/debian buster-backports main contrib non-free`
   - `./scripts/data-path-fix.sh`
 - Update fluidd
   - Use `kiauh` (`kiauh` itself requires and will prompt for an update first, this is safe)
@@ -46,6 +46,8 @@ This profile should represent the entire bed, do not use this name for adaptive 
 The screen must not be used for probe calibration or meshing, the procedure outlined by BTT must now be followed
 
 Here is my probe section, all changes required by eddy are contained in this section, this should replace the section with the same header in configuration:
+
+### Probe section
 
  ```ini
 #####################################################################
