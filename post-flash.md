@@ -1,0 +1,2 @@
+- Update backports deb
+- Update timezone `sudo armbian-config`
