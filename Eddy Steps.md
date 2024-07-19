@@ -31,7 +31,7 @@
   - `systemctl restart klipper`
   - `systemctl restart moonraker`
 
-Before you run levelling using procedure documented in eddy repo, you must edit elegoo_conf.ini:
+Before you run levelling using procedure documented in eddy repo, you must edit elegoo_conf.ini (here? ./Desktop/myfile/znp/znp_tjc_klipper/elegoo_conf.ini):
 
 Under `[printer_offset]`
 ```
