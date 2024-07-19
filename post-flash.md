@@ -1,2 +1,6 @@
 - Update backports deb
 - Update timezone `sudo armbian-config`
+- Add PID calibration macros
+- Add twist screw macros
+- Add obico
+- Add camera
