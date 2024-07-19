@@ -2,14 +2,17 @@
 - Replace Macros, (see snippets)
 - Comment/Remove `max_accel_to_decel` in `printer` section of `printer.cfg`
 - Replace `Probe` section in config, as above
-- Replace `moonraker.conf` (see snippets)
-- Update klipper to master
+- Replace `moonraker.conf` (see snippets) >> probably means to remove the deprecated sections
+- Update klipper to master >> This is probably not correct for everyone. Build the firmware normal.
   - `cd ~/klipper`
-  - `git reset --hard`
-  - `git pull`
-  - `wget https://raw.githubusercontent.com/OpenNeptune3D/OpenNept4une/main/mcu-firmware/virtualmcu.config`
-  - `make KCONFIG_CONFIG=virtualmcu.config flash`
-    - **Optionally:** *Follow instructions and use configuration provided by the ON project to build and flash STM32 firmware*
+  - make menuconf
+  - Follow the recommendations for the mcu
+  - plugin the BTT Eddy while holding the boot button
+  - run `lsusb` to make sure the Eddy has an address
+  - `make clean`
+  - `make flash FLASH_DEVICE=2e8a:0003`
+  - find device `ls /dev/serial/by-id/*`
+  - Take note of the name, it's not the same for some. You will use this in the printer.cfg
 - Update klipper with eddy and n4 support
   - `git remote add n4.klipper https://git.krakjoe.dev/n4.klipper.git`
   - `git fetch n4.klipper`
