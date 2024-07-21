@@ -10,9 +10,14 @@
 - Watch the [BTT Eddy installation guide](https://drive.google.com/file/d/1uXiymZxoWhvRIwTwojOh0fGKmjitoytf/view)
 - Read the [BTT Eddy instllation docs](https://github.com/bigtreetech/Eddy/blob/master/README.md)
 
+Note: Ignore the steps to use Kiauh from the BTT instructions! You did these steps following krakjoe's Klipper and Moonraker method.
+
 # Step 1 Install the Eddy
 
-There are a couple ways to do this, but I like 
+There are a couple ways to do this and there are several YouTubes out there that cover it. 
+
+I used the BTT-Eddy_Adapter_v05.stl mounting bracket for my printer:
+https://www.printables.com/model/928061-neptune-4-btt-eddy-adapter
 
 # Step 2 Compiling the firmware
 
