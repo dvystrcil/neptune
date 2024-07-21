@@ -1,1 +1,1 @@
-ansible-playbook -i inventory.ini playbooks/update.yaml
+ansible-playbook -i inventory.ini playbooks/update-printer-full.yaml

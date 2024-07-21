@@ -5,12 +5,15 @@
   gather_facts: true
 
   vars:
-    destination: /home/mks/klipper_config/printer.cfg
+    destination: /home/mks/klipper_config
 
   tasks:
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
-        src: ../../../configuration/printer.cfg
-        dest: "{{ destination }}"
+        src: "../../../configuration/{{ item }}"
+        dest: "{{ destination }}/{{ item }}"
+      loop:
+        - printer.cfg
+        - adxlmcu.cfg
 
 - import_playbook: ../klipper/restart-klipper.yaml
