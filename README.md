@@ -1,21 +1,21 @@
 # How to Update Neptune 4 Using krakjoe's Method
 
-Laying down some expectations... I put this repo together to accomplish an few goals
+Laying down some expectations... I put this repo together to accomplish a few goals
 - A place to back up my configuration
 - A place to update my Neptune 4 Pro using automation
 - A place to practice using Ansible
 
-I am leaning heavily on the work done by krakjoe, a user out on the Elegoo Discord. He was able to provide and update Klipper and Moonraker specificly for use with the BTT Eddy probe. This resulted in allowing us to bring our Neptunes up to spec with the rest of the world. Lets be clear. He is allowed to do this. He is doing this on his own time. He is not affliated with Elegoo.
+I am leaning heavily on the work done by krakjoe, a user out on the Elegoo Discord. He was able to provide and update Klipper and Moonraker specifically for use with the BTT Eddy probe. This resulted in allowing us to bring our Neptunes up to spec with the rest of the world. Let's be clear. He is allowed to do this. He is doing this on his own time. He is not affiliated with Elegoo.
 
-If you came here looking for a more open and up to date way to keep your Neptune up to spec, there is the [OpenNept4une project](https://github.com/OpenNeptune3D/OpenNept4une), where you can get the latest Klipper, Moonraker, etc... They are a fine team and as an open source project I encourage any who can help to please do so.
+If you came here looking for a more open and up-to-date way to keep your Neptune up to spec, there is the [OpenNept4une project](https://github.com/OpenNeptune3D/OpenNept4une), where you can get the latest Klipper, Moonraker, etc... They are a fine team and as an open source project I encourage any who can help to please do so.
 
-Finally, I am not an expert in 3D printers, or Klipper, or Moonraker... this is a hobby I enjoy dabbling in. 
+Finally, I am not an expert in 3D printers, Klipper, or Moonraker... this is a hobby I enjoy dabbling in. 
 
 If you ask me for support, please read that last sentence again. I can only help with things that I have personally written in this repo.
 
 What to expect from this repo:
-- A guide to install krakjoe work. I hope you can leaverage the ansible playbooks I have written.
-- A veiw into my personal printer configs. Nothing special here folks, your printer config will likely be different. Move along...
+- A guide to installing krakjoe's work. I hope you can leverage the ansible playbooks I have written.
+- A view into my personal printer configs. Nothing special here folks, your printer config will likely be different. Move along...
 
 ## Installation
 
@@ -34,14 +34,14 @@ git clone https://github.com/dvystrcil/neptune.git
 cd neptune
 ```
 
-Change directory to the `ansible` folder, make `run-update.sh` executable, and run it
+Change directory to the `ansible` folder, make `run-update.sh` executable and run it
 ```bash
 cd ansible
 sudo chmod +x run-update.sh
 ./run-update.sh
 ```
 
-Let ansible do its thing. It should take about 5 minutes. If a reboot occurs then a kernal update was applied (rare occurance). Just run-update.sh again.
+Let Ansible do its thing. It should take about 5 minutes. If a reboot occurs then a kernel update is applied (rare occurrence). Just run-update.sh again.
 
 #### Extra Credit: Correct your Time Zone
 Edit the `playbooks/system/time-zone.yaml` so the `name: America/Los_Angeles` reflects the zone you want. Then come back to the ansible directory and run:
@@ -56,7 +56,7 @@ More Extra Credit: You may have caught on that the playbooks are fairly granular
 
 So you seem to be someone who likes to type a lot. Fair enough.
 
-Update your sources, because if they are original, its broken.
+Update your sources, because if they are original, it's broken.
 
 Open your `/etc/sources.list` in your favorite editor, and replace this line:
 
@@ -98,7 +98,7 @@ git pull n4.moonraker n4/master
 ./scripts/data-path-fix.sh
 ```
 
-A note about `data-path-fix.sh`: This is a script which corrects all the open source Klipper and Moonraker pathing to Elegoo's requirements. If you update either Klipper or Mookraker using krakjoe work, its important to run this again.
+A note about `data-path-fix.sh`: This is a script that corrects all the open source Klipper and Moonraker pathing to Elegoo's requirements. If you update either Klipper or Mookraker using krakjoe work, its important to run this again.
 
 ### Step 4 - Update Kiauh and Fluidd
 
@@ -111,11 +111,11 @@ If it asks to update Kiauh, say yes. Run it again if needed. When you get to the
 
 ![image](https://github.com/user-attachments/assets/1c17d1ec-3113-4e1a-a31e-3fe74707f77c)
 
+The git errors are expected. This is the side effect of pulling Klipper and Moonraker down from another remote source.
+
 ![image](https://github.com/user-attachments/assets/c7a26acb-00e7-4659-ae49-eef40338e6b6)
 
-
-
-### Step 5 - Update Your Printer Configuations
+### Step 5 - Update Your Printer Configurations
 
 TBD - lots of compare edit work
 
