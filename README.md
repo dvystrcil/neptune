@@ -1,4 +1,4 @@
-# How to Update Neptune 4 Using krakjoe Method
+# How to Update Neptune 4 Using krakjoe's Method
 
 Laying down some expectations... I put this repo together to accomplish an few goals
 - A place to back up my configuration
