@@ -1,3 +1,5 @@
+Don't read too much into this. I was gathering info.
+
 - Update to the latest elegoo firmware
 - Replace Macros, (see snippets)
 - Comment/Remove `max_accel_to_decel` in `printer` section of `printer.cfg`
