@@ -5,7 +5,7 @@ Laying down some expectations... I put this repo together to accomplish an few g
 - A place to update my Neptune 4 Pro using automation
 - A place to practice using Ansible
 
-I am leaning heavily on the work done by krakjoe, a user out on the Elegoo Discord. He was able to provide and update Klipper and Moonraker specificly for use with the BTT Eddy probe. This results in allowing us to bring our Neptunes up to spec with the rest of the world. Lets be clear. He is allowed to do this. He is doing this on his own time. He is not affliated with Elegoo.
+I am leaning heavily on the work done by krakjoe, a user out on the Elegoo Discord. He was able to provide and update Klipper and Moonraker specificly for use with the BTT Eddy probe. This resulted in allowing us to bring our Neptunes up to spec with the rest of the world. Lets be clear. He is allowed to do this. He is doing this on his own time. He is not affliated with Elegoo.
 
 If you came here looking for a more open and up to date way to keep your Neptune up to spec, there is the [OpenNept4une project](https://github.com/OpenNeptune3D/OpenNept4une), where you can get the latest Klipper, Moonraker, etc... They are a fine team and as an open source project I encourage any who can help to please do so.
 
