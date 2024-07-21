@@ -105,6 +105,12 @@ cd /home/mks/kiauh
 ```
 If it asks to update Kiauh, say yes. Run it again if needed. When you get to the menu you want to choose Update, and then Fluidd. If you update Klipper or Mookraker, you are getting the non-elegoo versions. It will overwrite all the work you have just done in steps 2 and 3.
 
+![image](https://github.com/user-attachments/assets/1c17d1ec-3113-4e1a-a31e-3fe74707f77c)
+
+![image](https://github.com/user-attachments/assets/c7a26acb-00e7-4659-ae49-eef40338e6b6)
+
+
+
 ### Step 5 Update Your Printer Configuations
 
 TBD - lots of compare edit work
@@ -113,3 +119,5 @@ I automated some parts
 
 - moonraker.config
 - printer.conf
+
+![image](https://github.com/user-attachments/assets/cc4007b7-ddab-4326-9132-b35f0ee12ec6)
