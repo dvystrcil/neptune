@@ -40,10 +40,10 @@ sudo chmod +x run-update.sh
 Let ansible do its thing. It should take about 5 minutes. If a reboot occurs then a kernal update was applied (rare occurance). Just run-update.sh again.
 
 #### Extra Credit: Correct your Time Zone
-Edit the `playbooks/system/timezone.yaml` so the `name: America/Los_Angeles` reflects the zone you want. Then come back to the ansible directory and run:
+Edit the `playbooks/system/time-zone.yaml` so the `name: America/Los_Angeles` reflects the zone you want. Then come back to the ansible directory and run:
 
 ```bash
-ansible-playbook -i inventory.ini playbooks/system/timezone.yaml
+ansible-playbook -i inventory.ini playbooks/system/time-zone.yaml
 ```
 
 More Extra Credit: You may have caught on that the playbooks are fairly granular. This means you can pick what task you want, even mix them around, or edit them to your liking. There are tons of resources about ansible out there and to be honest their documenation is pretty good.
