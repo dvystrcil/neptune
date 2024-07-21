@@ -85,6 +85,7 @@ git fetch n4.klipper n4/master
 git reset --hard FETCH_HEAD
 git pull n4.klipper n4/master
 ```
+Why are we initializing a git repo? It's because Elegoo have their own repo and does not want others to pull from it. So they delete their `.git` folder.
 
 ### Step 3 - Update Moonraker
 
