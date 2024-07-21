@@ -7,7 +7,7 @@
 
 - Own the BTT Eddy
 - Update your printer with the krakjoe's Klipper and Moonraker. This is all in the README.md
-- Watch the BTT Eddy installation guide
+- Watch the [BTT Eddy installation guide](https://drive.google.com/file/d/1uXiymZxoWhvRIwTwojOh0fGKmjitoytf/view)
 - Read the [BTT Eddy instllation docs](https://github.com/bigtreetech/Eddy/blob/master/README.md)
 
 # Step 1 Install the Eddy
