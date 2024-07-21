@@ -71,7 +71,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 ### Step 2 Update Klipper
 
-Here is where we lean in on krakjoe work. 
+Here is where you get to see how we are leaning into krakjoe's work. 
 
 ```bash
 cd /home/mks/klipper
