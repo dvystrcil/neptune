@@ -12,17 +12,17 @@
 
 Note: Ignore the steps to use Kiauh from the BTT instructions! You did these steps following krakjoe's Klipper and Moonraker method.
 
-# Step 1 Install the Eddy
+# Step 1 - Install the Eddy
 
 There are a couple ways to do this and there are several YouTubes out there that cover it. 
 
 I used the BTT-Eddy_Adapter_v05.stl mounting bracket for my printer:
 https://www.printables.com/model/928061-neptune-4-btt-eddy-adapter
 
-# Step 2 Compiling the firmware
+# Step 2 - Compiling the firmware
 
 
-# Step 3 Updating your printer.cfg
+# Step 3 - Updating your printer.cfg
 
 Add these marcos to your printer.cfg.
 - Remove the old `[probe]` section
@@ -76,6 +76,6 @@ z_hop: 10
 z_hop_speed: 25
 ```
 
-# Step 4 Configuring your Eddy
+# Step 4 - Configuring your Eddy
 
 This step is all on on Big Tree Tech's side. [Follow their documents](https://github.com/bigtreetech/Eddy/blob/master/README.md)

@@ -5,11 +5,15 @@ Laying down some expectations... I put this repo together to accomplish an few g
 - A place to update my Neptune 4 Pro using automation
 - A place to practice using Ansible
 
-I am leaning heavily on the work done by krakjoe a user out on the Elegoo Discord. He was able to provide and update Klipper and Moonraker, as well as steps and configs to get the Neptune 4 up to spec with the world. I am not an expert in 3D printers, or Klipper, or Moonraker... this is a hobby I enjoy dabbling in. 
+I am leaning heavily on the work done by krakjoe, a user out on the Elegoo Discord. He was able to provide and update Klipper and Moonraker specificly for use with the BTT Eddy probe. This results in allowing us to bring our Neptunes up to spec with the rest of the world. Lets be clear. He is allowed to do this. He is doing this on his own time. He is not affliated with Elegoo.
+
+If you came here looking for a more open and up to date way to keep your Neptune up to spec, there is the [OpenNept4une project](https://github.com/OpenNeptune3D/OpenNept4une), where you can get the latest Klipper, Moonraker, etc... They are a fine team and as an open source project I encourage any who can help to please do so.
+
+Finally, I am not an expert in 3D printers, or Klipper, or Moonraker... this is a hobby I enjoy dabbling in. 
 
 If you ask me for support, please read that last sentence again. I can only help with things that I have personally written in this repo.
 
-What to expect from this repo.
+What to expect from this repo:
 - A guide to install krakjoe work. I hope you can leaverage the ansible playbooks I have written.
 - A veiw into my personal printer configs. Nothing special here folks, your printer config will likely be different. Move along...
 
@@ -22,7 +26,7 @@ You need to do a few things before you begin
 - Fork or pull this repo to where you are doing the work. Cloning to your printer is OK if you have the space available.
 - Update your printer to the latest firmware. If you know what you are doing you could probably use older firmware, but I started by updating to `NEPTUNE 4 PRO - APP_V1.1.3.1-UI_1.2.14-20240705-EN` which is for my printer (Neptune 4 Pro).
 
-### Step 0 The Automated Way of 1 thru 3
+### Step 0 - The Automated Way of 1 thru 3
 
 Clone this repo
 ```bash
@@ -48,7 +52,7 @@ ansible-playbook -i inventory.ini playbooks/system/time-zone.yaml
 
 More Extra Credit: You may have caught on that the playbooks are fairly granular. This means you can pick what task you want, even mix them around, or edit them to your liking. There are tons of resources about ansible out there and to be honest their documenation is pretty good.
 
-### Step 1 Update Your OS
+### Step 1 - Update Your OS
 
 So you seem to be someone who likes to type a lot. Fair enough.
 
@@ -69,7 +73,7 @@ Then, update your OS
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 ```
 
-### Step 2 Update Klipper
+### Step 2 - Update Klipper
 
 Here is where you get to see how we are leaning into krakjoe's work. 
 
@@ -82,7 +86,7 @@ git reset --hard FETCH_HEAD
 git pull n4.klipper n4/master
 ```
 
-### Step 3 Update Moonraker
+### Step 3 - Update Moonraker
 
 ```bash
 cd /home/mks/moonraker
@@ -96,7 +100,7 @@ git pull n4.moonraker n4/master
 
 A note about `data-path-fix.sh`: This is a script which corrects all the open source Klipper and Moonraker pathing to Elegoo's requirements. If you update either Klipper or Mookraker using krakjoe work, its important to run this again.
 
-### Step 4 Update Kiauh and Fluidd
+### Step 4 - Update Kiauh and Fluidd
 
 Here is where I stopped trying to automate things. As it is Kiauh is already a nice tool why not use it?
 
@@ -111,7 +115,7 @@ If it asks to update Kiauh, say yes. Run it again if needed. When you get to the
 
 
 
-### Step 5 Update Your Printer Configuations
+### Step 5 - Update Your Printer Configuations
 
 TBD - lots of compare edit work
 
