@@ -55,3 +55,7 @@
       dest: "{{ destination }}"
       force: yes
 
+# post update tasks
+- import_playbook: update-moonraker-config.yaml
+- import_playbook: update-data-paths.yaml
+- import_playbook: restart-moonraker.yaml

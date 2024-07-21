@@ -8,5 +8,6 @@
   - name: Restart moonraker.service
     ansible.builtin.systemd:
       name: moonraker.service
+      daemon_reload: yes
       state: restarted
     become: yes

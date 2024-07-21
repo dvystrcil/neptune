@@ -1,6 +1,6 @@
 ---
 - hosts: printers
-  become: true
+  become: yes
   become_user: mks
   gather_facts: true
 
@@ -55,3 +55,7 @@
       dest: "{{ destination }}"
       force: yes
 
+# post update tasks
+- import_playbook: update-elegoo-conf-ini.yaml
+- import_playbook: update-printer-cfg.yaml
+- import_playbook: restart-klipper.yaml

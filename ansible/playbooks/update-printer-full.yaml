@@ -1,0 +1,11 @@
+---
+
+# update the OS 
+- import_playbook: fix-armbian-deb-repos.yaml
+- import_playbook: update-armbian.yaml
+
+# update klipper
+- import_playbook: klipper/update-klipper.yaml
+
+# update moonraker
+- import_playbook: moonraker/update-moonraker.yaml

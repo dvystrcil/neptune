@@ -8,5 +8,6 @@
   - name: Restart klipper.service
     ansible.builtin.systemd:
       name: klipper.service
+      daemon_reload: yes
       state: restarted
     become: yes

@@ -1,6 +1,6 @@
 ---
 - hosts: printers
-  become: true
+  become: yes
   gather_facts: true
 
   vars:
@@ -10,5 +10,5 @@
 
   - name: Fix Moonraker data paths
     command: 
-      cmd: "./scripts/data-path-fix.sh"
+      cmd: sudo -u mks scripts/data-path-fix.sh
       chdir: "{{ destination }}"
