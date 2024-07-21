@@ -5,7 +5,7 @@ Laying down some expectations... I put this repo together to accomplish an few g
 - A place to update my Neptune 4 Pro using automation
 - A place to practice using Ansible
 
-I am leaning heavily on the work done by krakjoe a user out on the Elegoo Discord. He was able to provide and update Klipper and Moonraker, as well as steps and configs to get the Neptune 4 up to spec with the world. I am not an expert in 3D printers, or Klipper, or Moonraker... its a hobby I enjoy dabbling in. 
+I am leaning heavily on the work done by krakjoe a user out on the Elegoo Discord. He was able to provide and update Klipper and Moonraker, as well as steps and configs to get the Neptune 4 up to spec with the world. I am not an expert in 3D printers, or Klipper, or Moonraker... this is a hobby I enjoy dabbling in. 
 
 If you ask me for support, please read that last sentence again. I can only help with things that I have personally written in this repo.
 
