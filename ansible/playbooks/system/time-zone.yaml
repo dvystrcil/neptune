@@ -1,0 +1,10 @@
+---
+- hosts: printers
+  become: true
+  become_user: mks
+  gather_facts: true
+
+  tasks:
+  - name: Set timezone to America/Los Angeles
+    community.general.timezone:
+      name: America/Los_Angeles

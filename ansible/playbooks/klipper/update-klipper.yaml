@@ -1,0 +1,57 @@
+---
+- hosts: printers
+  become: true
+  become_user: mks
+  gather_facts: true
+
+  vars:
+    destination: /home/mks/klipper
+
+
+  tasks:
+
+  - name: Initialize git in the klipper folder
+    command: git init
+    args: 
+        chdir: "{{ destination }}"
+        creates: "{{ destination }}/.git"
+
+  - name: Add remote upstream to github projects
+    command:
+      cmd: git remote add n4.klipper https://git.krakjoe.dev/n4.klipper.git
+      chdir: "{{ destination }}"
+    register: add_result
+    changed_when: add_result.rc == 0
+    failed_when:
+      - add_result.rc != 0
+      - add_result.stderr | default('') is not search("remote .* already exists")
+
+  - name: Fetch the remote branch
+    command:
+      cmd: git fetch n4.klipper n4/eddy
+      chdir: "{{ destination }}"
+    register: add_result
+    changed_when: add_result.rc == 0
+    failed_when:
+      - add_result.rc != 0
+      - add_result.stderr | default('') is not search("remote .* already exists")
+
+  - name: Reset the HEAD the remote branch
+    command:
+      cmd: git reset --hard FETCH_HEAD
+      chdir: "{{ destination }}"
+    register: add_result
+    changed_when: add_result.rc == 0
+    failed_when:
+      - add_result.rc != 0
+      - add_result.stderr | default('') is not search("remote .* already exists")
+
+  - name: Pull the remote repo
+    git: 
+      clone: no
+      repo: https://git.krakjoe.dev/n4.klipper.git
+      remote: n4.klipper
+      version: n4/eddy
+      dest: "{{ destination }}"
+      force: yes
+

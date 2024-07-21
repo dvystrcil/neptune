@@ -1,0 +1,21 @@
+---
+- hosts: printers
+  become: true
+  become_user: mks
+  gather_facts: true
+
+  vars:
+    destination: /home/mks/klipper_config/moonraker.conf
+
+  tasks:
+    - name: Remove [server] option 'enable_debug_logging' from moonraker.conf
+      lineinfile:
+        path: "{{ destination }}"
+        regexp: "{{ item }}"
+        state: absent
+      loop:
+        - "^enable_debug_logging"
+        - "^database_path"
+        - "^config_path"
+        - "^log_path"
+

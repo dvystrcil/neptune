@@ -1,0 +1,20 @@
+---
+- hosts: printers
+  become: true
+  become_user: mks
+  gather_facts: true
+
+  vars:
+    destination: /home/mks/klipper_config/printer.cfg
+
+  tasks:
+    - name: Remove default cruft from printer.config
+      community.general.ini_file:
+        path: "{{ destination }}"
+        section: "{{ item }}" 
+        state: absent
+      loop:
+        - adxl345
+        - resonance_tester
+
+- import_playbook: restart-klipper.yaml

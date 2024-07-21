@@ -1,0 +1,28 @@
+---
+- hosts: printers
+  become: true
+  become_user: root
+  gather_facts: true
+  tasks:
+    - name: Update apt repo and cache on all Debian/Ubuntu boxes
+      apt: 
+        upgrade: dist
+        update_cache: true 
+        force_apt_get: true 
+
+    - name: Remove useless packages from the cache
+      apt:
+        autoclean: true
+
+    - name: Remove dependencies that are no longer required
+      apt:
+        autoremove: true
+
+    - name: Check if reboot required
+      stat:
+        path: /var/run/reboot-required
+      register: reboot_required_file
+
+    - name: Reboot if required
+      reboot:
+      when: reboot_required_file.stat.exists == true

@@ -1,0 +1,19 @@
+---
+- hosts: printers
+  become: true
+  become_user: root
+  gather_facts: true
+  tasks:
+
+  - name: Remove old repository in sources list
+    ansible.builtin.apt_repository:
+      repo: "deb http://deb.debian.org/debian buster-backports main contrib non-free"
+      state: absent
+      filename: sources.list
+
+  
+  - name: Add repository into sources list
+    ansible.builtin.apt_repository:
+      repo: "deb http://archive.debian.org/debian buster-backports main contrib non-free"
+      state: present
+      filename: sources.list

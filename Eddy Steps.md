@@ -142,3 +142,9 @@ Once you have switched branches, the "virtual mcu" (which is a linux process), m
 So far, elegoo have included klipper and moonraker in their update packages, so installing elegoo provided updates over this mod will wipe out the support.
 If they don't, and continue to make changes to klipper and moonraker, users will have to apply the update and set (or reset) branches to branches with those changes ported ... (edited)
 afaict I'm licensed to repackage the updates contained in ELEGOO_UPDATE_DIR (just not screen firmware blobs), that's also an option ...
+
+<!-- git init
+git remote add n4.moonraker https://git.krakjoe.dev/n4.moonraker.git
+git fetch n4.moonraker n4/master
+git reset --hard FETCH_HEAD
+git pull n4.moonraker n4/master -->

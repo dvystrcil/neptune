@@ -1,0 +1,16 @@
+---
+- hosts: printers
+  become: true
+  become_user: mks
+  gather_facts: true
+
+  vars:
+    destination: /home/mks/klipper_config/printer.cfg
+
+  tasks:
+    - name: Copy file with owner and permissions
+      ansible.builtin.copy:
+        src: ../../../configuration/printer.cfg
+        dest: "{{ destination }}"
+
+- import_playbook: ../klipper/restart-klipper.yaml

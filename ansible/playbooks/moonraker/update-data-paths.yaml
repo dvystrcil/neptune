@@ -1,0 +1,14 @@
+---
+- hosts: printers
+  become: true
+  gather_facts: true
+
+  vars:
+    destination: /home/mks/moonraker
+
+  tasks:
+
+  - name: Fix Moonraker data paths
+    command: 
+      cmd: "./scripts/data-path-fix.sh"
+      chdir: "{{ destination }}"

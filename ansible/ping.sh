@@ -1,0 +1,1 @@
+ansible printers -m ping -i inventory.ini

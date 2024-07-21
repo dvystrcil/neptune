@@ -1,0 +1,27 @@
+---
+- hosts: printers
+  become: true
+  become_user: mks
+  gather_facts: true
+
+  vars:
+    destination: /home/mks/Desktop/myfile/znp/znp_tjc_klipper/elegoo_conf.ini
+
+  tasks:
+    - name: Update printer_offset
+      community.general.ini_file:
+        path: "{{ destination }}"
+        section: printer_offset
+        option: z_offset
+        value: 0.0
+        state: present
+
+    - name: Update printer_offset
+      community.general.ini_file:
+        path: "{{ destination }}"
+        section: level_mode
+        option: level_points
+        value: 6
+        state: present
+
+- import_playbook: restart-klipper.yaml

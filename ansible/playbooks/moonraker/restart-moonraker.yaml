@@ -1,0 +1,12 @@
+---
+- hosts: printers
+  become: true
+  gather_facts: true
+
+  tasks:
+    
+  - name: Restart moonraker.service
+    ansible.builtin.systemd:
+      name: moonraker.service
+      state: restarted
+    become: yes

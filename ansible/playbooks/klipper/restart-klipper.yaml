@@ -1,0 +1,12 @@
+---
+- hosts: printers
+  become: true
+  gather_facts: true
+
+  tasks:
+    
+  - name: Restart klipper.service
+    ansible.builtin.systemd:
+      name: klipper.service
+      state: restarted
+    become: yes
