@@ -126,3 +126,36 @@ I automated some parts
 - printer.conf
 
 ![image](https://github.com/user-attachments/assets/cc4007b7-ddab-4326-9132-b35f0ee12ec6)
+
+### The Macro `max_accel_to_decel` Has Been Depricated 
+
+`[gcode_macro PRINT_END]`
+Replace:
+```ini
+    {% set RUN_DECEL    = printer.configfile.settings['printer'].max_accel_to_decel|float %}
+    SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} ACCEL_TO_DECEL={RUN_DECEL}
+```
+with:
+```ini
+    {% set RUN_CRUISE   = printer.configfile.settings['printer'].minimum_cruise_ratio|float %}
+    SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} MINIMUM_CRUISE_RATIO={RUN_CRUISE}SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} MINIMUM_CRUISE_RATIO={RUN_CRUISE}
+```
+
+`[gcode_macro CANCEL_PRINT]`
+Replace:
+```ini
+    {% set RUN_DECEL    = printer.configfile.settings['printer'].max_accel_to_decel|float %}
+    SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} ACCEL_TO_DECEL={RUN_DECEL}
+```
+with:
+```ini
+    {% set RUN_CRUISE   = printer.configfile.settings['printer'].minimum_cruise_ratio|float %}
+    SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} MINIMUM_CRUISE_RATIO={RUN_CRUISE}
+```
+
+`[printer]`
+Remove the `max_accel_to_decel` property:
+```ini
+max_accel_to_decel: 20000 
+```
+
