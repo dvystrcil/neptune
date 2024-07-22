@@ -125,9 +125,15 @@ I automated some parts
 - moonraker.config
 - printer.conf
 
-![image](https://github.com/user-attachments/assets/cc4007b7-ddab-4326-9132-b35f0ee12ec6)
+
 
 ### The Macro `max_accel_to_decel` Has Been Depricated 
+
+You can read more details about this on the [Klipper Config Changes](https://www.klipper3d.org/Config_Changes.html) log. 
+
+If you are seeing this message in Klipper you need to edit your printer.cfg with the following:
+
+![image](https://github.com/user-attachments/assets/cc4007b7-ddab-4326-9132-b35f0ee12ec6)
 
 `[gcode_macro PRINT_END]`
 Replace:
