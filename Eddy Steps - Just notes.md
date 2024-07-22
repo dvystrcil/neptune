@@ -145,6 +145,7 @@ So far, elegoo have included klipper and moonraker in their update packages, so 
 If they don't, and continue to make changes to klipper and moonraker, users will have to apply the update and set (or reset) branches to branches with those changes ported ... (edited)
 afaict I'm licensed to repackage the updates contained in ELEGOO_UPDATE_DIR (just not screen firmware blobs), that's also an option ...
 
+```ini
 [gcode_macro G29]
 gcode:
       M400
@@ -161,7 +162,7 @@ gcode:
       G1 Z0 F300
 ```
 
-```
+```ini
 [gcode_macro PRINT_END]
 gcode:
     SAVE_VARIABLE VARIABLE=was_interrupted VALUE=False
@@ -226,7 +227,7 @@ gcode:
       M84 X Y E
 ```
 
-`moonraker.conf`:
+moonraker.conf:
 
 ```ini
 [server]
