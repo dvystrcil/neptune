@@ -17,4 +17,17 @@
         - adxl345
         - resonance_tester
 
+    - name: Update max_accel_to_decel instructions
+      ansible.builtin.replace:
+        path: /etc/apache2/sites-available/default.conf
+        after: "{{ destination }}"
+        regexp: "{{ item.old }}"
+        replace: "{{ item.new }}"
+      loop:
+        - old: "{% set RUN_DECEL    = printer.configfile.settings['printer'].max_accel_to_decel|float %}"
+          new: {% set RUN_CRUISE   = printer.configfile.settings['printer'].minimum_cruise_ratio|float %}
+        - old: "SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} ACCEL_TO_DECEL={RUN_DECEL}"
+          new: SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} MINIMUM_CRUISE_RATIO={RUN_CRUISE}
+      
+
 - import_playbook: restart-klipper.yaml
