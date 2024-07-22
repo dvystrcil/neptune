@@ -87,47 +87,7 @@ git pull n4.klipper n4/master
 ```
 Why are we initializing a git repo? It's because Elegoo have their own repo and does not want others to pull from it. So they delete their `.git` folder.
 
-### Step 3 - Update Moonraker
-
-```bash
-cd /home/mks/moonraker
-git init
-git remote add n4.moonraker https://git.krakjoe.dev/n4.moonraker.git
-git fetch n4.moonraker n4/master
-git reset --hard FETCH_HEAD
-git pull n4.moonraker n4/master
-./scripts/data-path-fix.sh
-```
-
-A note about `data-path-fix.sh`: This is a script that corrects all the open source Klipper and Moonraker pathing to Elegoo's requirements. If you update either Klipper or Mookraker using krakjoe work, its important to run this again.
-
-### Step 4 - Update Kiauh and Fluidd
-
-Here is where I stopped trying to automate things. As it is Kiauh is already a nice tool why not use it?
-
-```bash
-cd /home/mks/kiauh
-```
-If it asks to update Kiauh, say yes. Run it again if needed. When you get to the menu you want to choose Update, and then Fluidd. If you update Klipper or Mookraker, you are getting the non-elegoo versions. It will overwrite all the work you have just done in steps 2 and 3.
-
-![image](https://github.com/user-attachments/assets/1c17d1ec-3113-4e1a-a31e-3fe74707f77c)
-
-The git errors are expected. This is the side effect of pulling Klipper and Moonraker down from another remote source.
-
-![image](https://github.com/user-attachments/assets/c7a26acb-00e7-4659-ae49-eef40338e6b6)
-
-### Step 5 - Update Your Printer Configurations
-
-TBD - lots of compare edit work
-
-I automated some parts
-
-- moonraker.config
-- printer.conf
-
-
-
-### The Macro `max_accel_to_decel` Has Been Depricated 
+#### The Macro `max_accel_to_decel` Has Been Depricated 
 
 You can read more details about this on the [Klipper Config Changes](https://www.klipper3d.org/Config_Changes.html) log. 
 
@@ -164,4 +124,48 @@ Remove the `max_accel_to_decel` property:
 ```ini
 max_accel_to_decel: 20000 
 ```
+
+If you are not using the `[adxl345]` or `[resonance_tester]` (only the plus and max have this built in) and you have not added an accellarometer yourself. Then remove these sections from your printer.cfg.
+
+### Step 3 - Update Moonraker
+
+```bash
+cd /home/mks/moonraker
+git init
+git remote add n4.moonraker https://git.krakjoe.dev/n4.moonraker.git
+git fetch n4.moonraker n4/master
+git reset --hard FETCH_HEAD
+git pull n4.moonraker n4/master
+./scripts/data-path-fix.sh
+```
+
+A note about `data-path-fix.sh`: This is a script that corrects all the open source Klipper and Moonraker pathing to Elegoo's requirements. If you update either Klipper or Mookraker using krakjoe work, its important to run this again.
+
+### Step 4 - Update Kiauh and Fluidd
+
+Here is where I stopped trying to automate things. As it is Kiauh is already a nice tool why not use it?
+
+```bash
+cd /home/mks/kiauh
+```
+If it asks to update Kiauh, say yes. Run it again if needed. When you get to the menu you want to choose Update, and then Fluidd. If you update Klipper or Mookraker, you are getting the non-elegoo versions. It will overwrite all the work you have just done in steps 2 and 3.
+
+![image](https://github.com/user-attachments/assets/1c17d1ec-3113-4e1a-a31e-3fe74707f77c)
+
+The git errors are expected. This is the side effect of pulling Klipper and Moonraker down from another remote source.
+
+![image](https://github.com/user-attachments/assets/c7a26acb-00e7-4659-ae49-eef40338e6b6)
+
+### Step 5 - Update Your Printer Configurations
+
+TBD - lots of compare edit work
+
+I automated some parts
+
+- moonraker.config
+
+
+
+
+
 

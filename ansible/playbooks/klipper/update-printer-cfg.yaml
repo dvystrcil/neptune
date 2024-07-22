@@ -19,15 +19,15 @@
 
     - name: Update max_accel_to_decel instructions
       ansible.builtin.replace:
-        path: /etc/apache2/sites-available/default.conf
-        after: "{{ destination }}"
+        path: "{{ destination }}"
         regexp: "{{ item.old }}"
-        replace: "{{ item.new }}"
+        replace: "{{ item.new | string }}"
       loop:
-        - old: "{% set RUN_DECEL    = printer.configfile.settings['printer'].max_accel_to_decel|float %}"
-          new: {% set RUN_CRUISE   = printer.configfile.settings['printer'].minimum_cruise_ratio|float %}
-        - old: "SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} ACCEL_TO_DECEL={RUN_DECEL}"
-          new: SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} MINIMUM_CRUISE_RATIO={RUN_CRUISE}
-      
+        - old: "^(.*)set RUN_DECEL(.*)$"
+          new: !unsafe "    {% set RUN_CRUISE   = printer.configfile.settings['printer'].minimum_cruise_ratio|float %}"
+        - old: "^(.*)ACCEL_TO_DECEL={RUN_DECEL}(.*)$"
+          new: '    SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} MINIMUM_CRUISE_RATIO={RUN_CRUISE}'
+        - old: "^max_accel_to_decel:(.*)$"
+          new: '# max_accel_to_decel:\1 >> depricated'
 
 - import_playbook: restart-klipper.yaml
