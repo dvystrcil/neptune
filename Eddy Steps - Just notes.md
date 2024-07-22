@@ -145,6 +145,108 @@ So far, elegoo have included klipper and moonraker in their update packages, so 
 If they don't, and continue to make changes to klipper and moonraker, users will have to apply the update and set (or reset) branches to branches with those changes ported ... (edited)
 afaict I'm licensed to repackage the updates contained in ELEGOO_UPDATE_DIR (just not screen firmware blobs), that's also an option ...
 
+[gcode_macro G29]
+gcode:
+      M400
+      BED_MESH_CLEAR
+      G28
+      BED_MESH_CALIBRATE PROFILE=6 METHOD=scan SCAN_MODE=rapid algorithm=bicubic
+      M400
+      G4 P2000
+      G91 
+      G1 Z5 F300 
+      G90
+      G28 Z
+      G1 X215 Y215 F12000
+      G1 Z0 F300
+```
+
+```
+[gcode_macro PRINT_END]
+gcode:
+    SAVE_VARIABLE VARIABLE=was_interrupted VALUE=False
+    RUN_SHELL_COMMAND CMD=clear_plr
+    clear_last_file
+    {% set RUN_VELOCITY = printer.configfile.settings['printer'].max_velocity|float %}
+    {% set RUN_ACCEL    = printer.configfile.settings['printer'].max_accel|float %}
+    {% set RUN_CRUISE   = printer.configfile.settings['printer'].minimum_cruise_ratio|float %}
+    SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} MINIMUM_CRUISE_RATIO={RUN_CRUISE}
+
+    M220 S100
+    M221 S100
+    {% set z = params.Z|default(100)|int %}
+    {% if (printer.gcode_move.position.z+5) < z %}   ##如果当前gcode-Z位置小于最大极限位置
+      G90                                         ; absolute positioning
+      G1 Z{z+5} F6000                       ; park nozzle at rear
+    {% endif %}
+    TURN_OFF_HEATERS
+    M107
+    M84 X Y E
+```
+
+```ini
+[gcode_macro CANCEL_PRINT]
+rename_existing: BASE_CANCEL_PRINT
+gcode:
+      SAVE_VARIABLE VARIABLE=was_interrupted VALUE=False
+      RUN_SHELL_COMMAND CMD=clear_plr
+      clear_last_file
+      {% set RUN_VELOCITY = printer.configfile.settings['printer'].max_velocity|float %}
+      {% set RUN_ACCEL    = printer.configfile.settings['printer'].max_accel|float %}
+      {% set RUN_CRUISE   = printer.configfile.settings['printer'].minimum_cruise_ratio|float %}
+      SET_VELOCITY_LIMIT VELOCITY={RUN_VELOCITY} ACCEL={RUN_ACCEL} MINIMUM_CRUISE_RATIO={RUN_CRUISE}
+      {% set z = params.Z|default(100)|int %}  
+      {% set x_park = params.X|default(printer.toolhead.axis_minimum.x+5)|int %} 
+      {% set y_park = params.Y|default(printer.toolhead.axis_maximum.y-5)|int %} 
+      SET_IDLE_TIMEOUT TIMEOUT={printer.configfile.settings.idle_timeout.timeout} 
+      SDCARD_RESET_FILE
+      M220 S100
+      M221 S100
+      M400             ; wait for buffer to clear
+      G91             ; relative positioning
+      M83           ; zero the extruder
+      G1 E-10.0 F1200       ; retract filament
+      TURN_OFF_HEATERS
+      M107             ; turn off fan
+    {% if (printer.gcode_move.position.z+5) < z %}
+      G90             ; absolute positioning
+      G0 X{x_park} Y{y_park} Z{z+5} F6000       ; park nozzle at rear
+    {% endif %}
+    {%if (printer.gcode_move.position.z+5) >= z %}
+    {%if (printer.gcode_move.position.z+5) < printer.toolhead.axis_maximum.z %}
+      G91             ; relative positioning
+      G1 Z5 F300
+      G90
+      G0 X{x_park} Y{y_park} F6000       ; park nozzle at rear
+      {% else %}
+      G90
+      G0 X{x_park} Y{y_park} Z{printer.toolhead.axis_maximum.z} F6000       ; park nozzle at rear
+    {% endif %}
+    {% endif %}
+      M84 X Y E
+```
+
+`moonraker.conf`:
+
+```ini
+[server]
+host: 0.0.0.0
+port: 7125
+klippy_uds_address: /tmp/klippy_uds
+
+[authorization]
+trusted_clients:
+    10.0.0.0/8
+    127.0.0.0/8
+    169.254.0.0/16
+    172.16.0.0/12
+    192.168.0.0/16
+    FE80::/10
+    ::1/128
+cors_domains:
+...
+```
+
 <!-- git init
 git remote add n4.moonraker https://git.krakjoe.dev/n4.moonraker.git
 git fetch n4.moonraker n4/master
