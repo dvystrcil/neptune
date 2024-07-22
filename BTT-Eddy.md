@@ -79,3 +79,39 @@ z_hop_speed: 25
 # Step 4 - Configuring your Eddy
 
 This step is all on on Big Tree Tech's side. [Follow their documents](https://github.com/bigtreetech/Eddy/blob/master/README.md)
+
+
+# Notes
+
+## Using z_offset for Your Filament
+
+While it is great that the Eddy always works from a 0 Z offset it doesn't allow for adjusting the "squish" you want when you lay down that first layer. There are several ways to do this. BTT has their own macros, In Ocra Slicer you can add the Z offset the start G-Code... but how do you get there? I will share what I like to use, others have their own methods... and it can be debated ad nauseam.
+
+I start by running a first layer test, and stepping the tool head up or down as needed. I have the option of using either the Elegoo UI with 0.01 steps, or Fluidd with 0.005 steps. When you get that perfect "squish" then finish the print and run these commands
+```
+Z_OFFSET_APPLY_PROBE
+SAVE_CONFIG
+```
+Klipper will restart and your z_offset will be 0 again.
+
+## Adaptive Meshing
+
+Back in January 2024 Klipper brought in the excellent use of KAMP. To use adaptive meshing with Eddy you only need to update your `[PRINT_START]` gcode.
+Example Only: Your PRINT_START may be different.
+```ini
+[gcode_macro PRINT_START]         
+gcode:
+    SAVE_VARIABLE VARIABLE=was_interrupted VALUE=True
+	  G92 E0                                         
+    BED_MESH_CLEAR                                     
+	  G90             
+    BED_MESH_CALIBRATE ADAPTIVE=1 METHOD=scan SCAN_MODE=rapid algorithm=bicubic #PROFILE=6          
+    CLEAR_PAUSE
+    M117 Printing
+```
+Note: Elegoo is specifically looking at PROFILE 6 when showing it on the UI. Since we want adaptive meshing `ADAPTIVE=1` we will not load `PROFILE=6`. 
+![image](https://github.com/user-attachments/assets/a81073c4-ef20-42e4-b36e-1155fd7602db)
+
+
+
+
