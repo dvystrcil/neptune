@@ -85,14 +85,18 @@ This step is all on on Big Tree Tech's side. [Follow their documents](https://gi
 
 ## Using z_offset for Your Filament
 
-While it is great that the Eddy always works from a 0 Z offset it doesn't allow for adjusting the "squish" you want when you lay down that first layer. There are several ways to do this. BTT has their own macros, In Ocra Slicer you can add the Z offset the start G-Code... but how do you get there? I will share what I like to use, others have their own methods... and it can be debated ad nauseam.
+While it is great that the Eddy always works from a 0 Z offset it doesn't allow for adjusting the "squish" you want when you lay down that first layer. There are several ways to do this. BTT has their own macros, In Ocra Slicer you can add the Z offset the start G-Code... but how do you get there? Here is what I like to use, others have their own methods... and it can be debated ad nauseam.
 
-I start by running a first layer test, and stepping the tool head up or down as needed. I have the option of using either the Elegoo UI with 0.01 steps, or Fluidd with 0.005 steps. When you get that perfect "squish" then finish the print and run these commands
+I start by running a first layer test, and stepping the tool head up or down as needed. I have the option of using either the Elegoo UI with 0.01 steps or Fluidd with 0.005 steps. When you get that perfect "squish" then finish the print and run these commands
 ```
 Z_OFFSET_APPLY_PROBE
 SAVE_CONFIG
 ```
 Klipper will restart and your z_offset will be 0 again.
+
+- Do you need to repeat steps continuously? No. Not unless you lost the mapping completely. You only really need to redo your first layer test when you change the filament or your bed moves a bit.
+- Do you need to run the tilt screw marco? Only if you think your bed needs to be retramed. Then redo your first layer test, you may have to do the paper trick first if it was off-level a lot.
+- Do I need to save the Z_OFFSET? You should, but if you don't when you shut down your printer or restart Klipper it will reset to 0 and lose the baby steps you worked hard to find.
 
 ## Adaptive Meshing
 
