@@ -2,7 +2,7 @@
 
 A list of all the modifications I have done to my Neptune 4 Pro
 
-| Type | Price | Works? | Notes |
+| Type | Paid | Works? | Notes |
 | :--- | ----: | :----: | :---- |
 | [Silicone Bushings](https://www.amazon.com/gp/product/B09NNFQQ8T/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | $7.99 | Y | Springs were not holding position. |
 | [Oldham Couplings (x2)](https://www.amazon.com/gp/product/B0BZ56F15T/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&th=1) | $8.99 | Y | Noticeable improvement in Z banding. |
