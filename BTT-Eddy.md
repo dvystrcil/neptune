@@ -21,6 +21,8 @@ https://www.printables.com/model/928061-neptune-4-btt-eddy-adapter
 
 # Step 2 - Compiling the firmware
 
+I will refer back to the BTT documenatin for this: [Compiling Firmware](https://github.com/bigtreetech/Eddy?tab=readme-ov-file#compiling-firmware)
+
 
 # Step 3 - Updating your printer.cfg
 
