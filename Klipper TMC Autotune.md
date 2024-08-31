@@ -6,6 +6,7 @@ Based on what SilentedFrost has discovered these are some of the attributes of t
 
 ![image](https://github.com/user-attachments/assets/75a469f6-d764-46fc-84b8-a697ec7c54df)
 
+Some more specs on the steppers: https://www.3djake.com/elegoo/stepper-motor-4
 
 
 ```ini
