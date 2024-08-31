@@ -1,4 +1,4 @@
-# 
+# Klipper TMC Autotune Notes
 
 Notes on my experimentation with getting the Klipper autotune working on my Elegoo Neptune 4 Pro
 
@@ -18,3 +18,42 @@ motor: bjd42d22-53v02
 motor: bjd42d22-53v02
 # motor: bj4d22-53v04
 ```
+
+## Fixing packages
+
+### Enum error
+https://github.com/andrewmcgr/klipper_tmc_autotune/issues/40
+
+run:
+```bash
+source ~/klippy-env/bin/activate
+pip install enum
+deactivate
+```
+
+### Signature error
+
+run:
+```bash
+source ~/klippy-env/bin/activate
+pip install funcsigs
+deactivate
+```
+
+Change this line:
+https://github.com/andrewmcgr/klipper_tmc_autotune/blob/main/autotune_tmc.py#L3
+```python
+import math, logging, os
+from enum import Enum
+from inspect import signature
+from . import tmc
+```
+to
+```python
+import math, logging, os
+from enum import Enum
+#from inspect import signature
+from funcsigs import signature
+from . import tmc
+```
+Probably a better way to do this so it can try the first and fall back on the second
