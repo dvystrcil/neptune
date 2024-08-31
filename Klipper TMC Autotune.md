@@ -27,11 +27,11 @@ holding_torque: 0.4
 max_current: 1.20
 steps_per_revolution: 200
 
-[autotune_tmc stepper_x]
+[| autotune_tmc stepper_x]
 motor: bj42d22-53v04
 tuning_goal: auto
 
-[autotune_tmc stepper_y]
+[| autotune_tmc stepper_y]
 motor: bj42d22-53v04
 tuning_goal: auto
 ```
@@ -58,7 +58,7 @@ deactivate
 ```
 
 Change this line:
-https://github.com/andrewmcgr/klipper_tmc_autotune/blob/main/autotune_tmc.py#L3
+https://github.com/andrewmcgr/klipper_tmc_autotune/blob/main/| autotune_tmc.py#L3
 ```python
 import math, logging, os
 from enum import Enum
@@ -79,185 +79,61 @@ Probably a better way to do this so it can try the first and fall back on the se
 
 Since I only have the XY steppers tuning I will do an X offset print and compare times and the sound.
 
-### Auto
-- Some growling from the Y I think
-- 5m25s
-
-```ini
-autotune_tmc set stepper_x pwm_freq=2
-autotune_tmc stepper_x ncycles=219 pfdcycles=73
-autotune_tmc set stepper_x tbl=1
-autotune_tmc set stepper_x toff=1
-autotune_tmc seting hysteresis based on 24.0 V
-dcoilblank = 0.010435, dcoilsd = 0.003278
-hysteresis = 0, htotal = 0, hstrt = 1, hend = -1
-autotune_tmc set stepper_x hstrt=0
-autotune_tmc set stepper_x hend=2
-autotune_tmc set stepper_x sgthrs=40
-autotune_tmc using max PWM speed 176.661987
-autotune_tmc set stepper_x pwm_autoscale=True
-autotune_tmc set stepper_x pwm_autograd=True
-autotune_tmc set stepper_x pwm_grad=15
-autotune_tmc set stepper_x pwm_ofs=33
-autotune_tmc set stepper_x pwm_reg=15
-autotune_tmc set stepper_x pwm_lim=4
-autotune_tmc set stepper_x tpwmthrs=1048575
-autotune_tmc set stepper_x en_spreadcycle=True
-autotune_tmc set stepper_x tcoolthrs=391(24.0)
-autotune_tmc set stepper_x semin=2
-autotune_tmc set stepper_x semax=4
-autotune_tmc set stepper_x seup=3
-autotune_tmc set stepper_x sedn=2
-autotune_tmc set stepper_x seimin=1
-autotune_tmc set stepper_x iholddelay=12
-autotune_tmc set stepper_x multistep_filt=True
-autotune_tmc set stepper_y pwm_freq=2
-autotune_tmc stepper_y ncycles=219 pfdcycles=73
-autotune_tmc set stepper_y tbl=1
-autotune_tmc set stepper_y toff=1
-autotune_tmc seting hysteresis based on 24.0 V
-dcoilblank = 0.010435, dcoilsd = 0.004006
-hysteresis = -1, htotal = -1, hstrt = 1, hend = -2
-autotune_tmc set stepper_y hstrt=0
-autotune_tmc set stepper_y hend=1
-autotune_tmc set stepper_y sgthrs=40
-autotune_tmc using max PWM speed 171.091564
-autotune_tmc set stepper_y pwm_autoscale=True
-autotune_tmc set stepper_y pwm_autograd=True
-autotune_tmc set stepper_y pwm_grad=15
-autotune_tmc set stepper_y pwm_ofs=40
-autotune_tmc set stepper_y pwm_reg=15
-autotune_tmc set stepper_y pwm_lim=4
-autotune_tmc set stepper_y tpwmthrs=1048575
-autotune_tmc set stepper_y en_spreadcycle=True
-autotune_tmc set stepper_y tcoolthrs=391(24.0)
-autotune_tmc set stepper_y semin=2
-autotune_tmc set stepper_y semax=4
-autotune_tmc set stepper_y seup=3
-autotune_tmc set stepper_y sedn=2
-autotune_tmc set stepper_y seimin=1
-autotune_tmc set stepper_y iholddelay=12
-autotune_tmc set stepper_y multistep_filt=True
-```
-
-### Silent
-- Some growling from the Y I think
-- 5m24s
-
-```ini
-autotune_tmc set stepper_x pwm_freq=2
-autotune_tmc stepper_x ncycles=219 pfdcycles=73
-autotune_tmc set stepper_x tbl=1
-autotune_tmc set stepper_x toff=1
-autotune_tmc seting hysteresis based on 24.0 V
-dcoilblank = 0.010435, dcoilsd = 0.003278
-hysteresis = 0, htotal = 0, hstrt = 1, hend = -1
-autotune_tmc set stepper_x hstrt=0
-autotune_tmc set stepper_x hend=2
-autotune_tmc set stepper_x sgthrs=40
-autotune_tmc using max PWM speed 176.661987
-autotune_tmc set stepper_x pwm_autoscale=True
-autotune_tmc set stepper_x pwm_autograd=True
-autotune_tmc set stepper_x pwm_grad=15
-autotune_tmc set stepper_x pwm_ofs=33
-autotune_tmc set stepper_x pwm_reg=15
-autotune_tmc set stepper_x pwm_lim=4
-autotune_tmc set stepper_x tpwmthrs=0
-autotune_tmc set stepper_x en_spreadcycle=False
-autotune_tmc set stepper_x tcoolthrs=391(24.0)
-autotune_tmc set stepper_x semin=2
-autotune_tmc set stepper_x semax=4
-autotune_tmc set stepper_x seup=3
-autotune_tmc set stepper_x sedn=2
-autotune_tmc set stepper_x seimin=1
-autotune_tmc set stepper_x iholddelay=12
-autotune_tmc set stepper_x multistep_filt=True
-autotune_tmc set stepper_y pwm_freq=2
-autotune_tmc stepper_y ncycles=219 pfdcycles=73
-autotune_tmc set stepper_y tbl=1
-autotune_tmc set stepper_y toff=1
-autotune_tmc seting hysteresis based on 24.0 V
-dcoilblank = 0.010435, dcoilsd = 0.004006
-hysteresis = -1, htotal = -1, hstrt = 1, hend = -2
-autotune_tmc set stepper_y hstrt=0
-autotune_tmc set stepper_y hend=1
-autotune_tmc set stepper_y sgthrs=40
-autotune_tmc using max PWM speed 171.091564
-autotune_tmc set stepper_y pwm_autoscale=True
-autotune_tmc set stepper_y pwm_autograd=True
-autotune_tmc set stepper_y pwm_grad=15
-autotune_tmc set stepper_y pwm_ofs=40
-autotune_tmc set stepper_y pwm_reg=15
-autotune_tmc set stepper_y pwm_lim=4
-autotune_tmc set stepper_y tpwmthrs=0
-autotune_tmc set stepper_y en_spreadcycle=False
-autotune_tmc set stepper_y tcoolthrs=391(24.0)
-autotune_tmc set stepper_y semin=2
-autotune_tmc set stepper_y semax=4
-autotune_tmc set stepper_y seup=3
-autotune_tmc set stepper_y sedn=2
-autotune_tmc set stepper_y seimin=1
-autotune_tmc set stepper_y iholddelay=12
-autotune_tmc set stepper_y multistep_filt=True
-```
-
-### Performance
-
-```ini
-autotune_tmc set stepper_x pwm_freq=2
-autotune_tmc stepper_x ncycles=219 pfdcycles=73
-autotune_tmc set stepper_x tbl=1
-autotune_tmc set stepper_x toff=1
-autotune_tmc seting hysteresis based on 24.0 V
-dcoilblank = 0.010435, dcoilsd = 0.003278
-hysteresis = 0, htotal = 0, hstrt = 1, hend = -1
-autotune_tmc set stepper_x hstrt=0
-autotune_tmc set stepper_x hend=2
-autotune_tmc set stepper_x sgthrs=40
-autotune_tmc using max PWM speed 176.661987
-autotune_tmc set stepper_x pwm_autoscale=True
-autotune_tmc set stepper_x pwm_autograd=True
-autotune_tmc set stepper_x pwm_grad=15
-autotune_tmc set stepper_x pwm_ofs=33
-autotune_tmc set stepper_x pwm_reg=15
-autotune_tmc set stepper_x pwm_lim=4
-autotune_tmc set stepper_x tpwmthrs=1048575
-autotune_tmc set stepper_x en_spreadcycle=True
-autotune_tmc set stepper_x tcoolthrs=391(24.0)
-autotune_tmc set stepper_x semin=2
-autotune_tmc set stepper_x semax=4
-autotune_tmc set stepper_x seup=3
-autotune_tmc set stepper_x sedn=2
-autotune_tmc set stepper_x seimin=1
-autotune_tmc set stepper_x iholddelay=12
-autotune_tmc set stepper_x multistep_filt=True
-autotune_tmc set stepper_y pwm_freq=2
-autotune_tmc stepper_y ncycles=219 pfdcycles=73
-autotune_tmc set stepper_y tbl=1
-autotune_tmc set stepper_y toff=1
-autotune_tmc seting hysteresis based on 24.0 V
-dcoilblank = 0.010435, dcoilsd = 0.004006
-hysteresis = -1, htotal = -1, hstrt = 1, hend = -2
-autotune_tmc set stepper_y hstrt=0
-autotune_tmc set stepper_y hend=1
-autotune_tmc set stepper_y sgthrs=40
-autotune_tmc using max PWM speed 171.091564
-autotune_tmc set stepper_y pwm_autoscale=True
-autotune_tmc set stepper_y pwm_autograd=True
-autotune_tmc set stepper_y pwm_grad=15
-autotune_tmc set stepper_y pwm_ofs=40
-autotune_tmc set stepper_y pwm_reg=15
-autotune_tmc set stepper_y pwm_lim=4
-autotune_tmc set stepper_y tpwmthrs=1048575
-autotune_tmc set stepper_y en_spreadcycle=True
-autotune_tmc set stepper_y tcoolthrs=391(24.0)
-autotune_tmc set stepper_y semin=2
-autotune_tmc set stepper_y semax=4
-autotune_tmc set stepper_y seup=3
-autotune_tmc set stepper_y sedn=2
-autotune_tmc set stepper_y seimin=1
-autotune_tmc set stepper_y iholddelay=12
-autotune_tmc set stepper_y multistep_filt=True
-```
-
+| Auto | Silent | Performance |
+| :--- | :----- | :---------- |
+| 5m25s | 5m24s | 5m24s |
+| autotune_tmc set stepper_x pwm_freq=2 | autotune_tmc set stepper_x pwm_freq=2 | autotune_tmc set stepper_x pwm_freq=2 |
+| autotune_tmc stepper_x ncycles=219 pfdcycles=73 | autotune_tmc stepper_x ncycles=219 pfdcycles=73 | autotune_tmc stepper_x ncycles=219 pfdcycles=73 |
+| autotune_tmc set stepper_x tbl=1 | autotune_tmc set stepper_x tbl=1 | autotune_tmc set stepper_x tbl=1 |
+| autotune_tmc set stepper_x toff=1 | autotune_tmc set stepper_x toff=1 | autotune_tmc set stepper_x toff=1 | 
+| autotune_tmc seting hysteresis based on 24.0 V | autotune_tmc seting hysteresis based on 24.0 V | autotune_tmc seting hysteresis based on 24.0 V |
+| dcoilblank = 0.010435, dcoilsd = 0.003278 | dcoilblank = 0.010435, dcoilsd = 0.003278 | dcoilblank = 0.010435, dcoilsd = 0.003278 |
+| hysteresis = 0, htotal = 0, hstrt = 1, hend = -1 | hysteresis = 0, htotal = 0, hstrt = 1, hend = -1 | hysteresis = 0, htotal = 0, hstrt = 1, hend = -1 |
+| autotune_tmc set stepper_x hstrt=0 | autotune_tmc set stepper_x hstrt=0 | autotune_tmc set stepper_x hstrt=0 |
+| autotune_tmc set stepper_x hend=2 | autotune_tmc set stepper_x hend=2 | autotune_tmc set stepper_x hend=2 |
+| autotune_tmc set stepper_x sgthrs=40 | autotune_tmc set stepper_x sgthrs=40 | autotune_tmc set stepper_x sgthrs=40 |
+| autotune_tmc using max PWM speed 176.661987 | autotune_tmc using max PWM speed 176.661987 | autotune_tmc using max PWM speed 176.661987 |
+| autotune_tmc set stepper_x pwm_autoscale=True | autotune_tmc set stepper_x pwm_autoscale=True | autotune_tmc set stepper_x pwm_autoscale=True |
+| autotune_tmc set stepper_x pwm_autograd=True | autotune_tmc set stepper_x pwm_autograd=True | autotune_tmc set stepper_x pwm_autograd=True |
+| autotune_tmc set stepper_x pwm_grad=15 | autotune_tmc set stepper_x pwm_grad=15 | autotune_tmc set stepper_x pwm_grad=15 |
+| autotune_tmc set stepper_x pwm_ofs=33 | autotune_tmc set stepper_x pwm_ofs=33 | autotune_tmc set stepper_x pwm_ofs=33 |
+| autotune_tmc set stepper_x pwm_reg=15 | autotune_tmc set stepper_x pwm_reg=15 | autotune_tmc set stepper_x pwm_reg=15 |
+| autotune_tmc set stepper_x pwm_lim=4 | autotune_tmc set stepper_x pwm_lim=4 | autotune_tmc set stepper_x pwm_lim=4 |
+| autotune_tmc set stepper_x tpwmthrs=1048575 | autotune_tmc set stepper_x tpwmthrs=0 | autotune_tmc set stepper_x tpwmthrs=1048575 |
+| autotune_tmc set stepper_x en_spreadcycle=True | autotune_tmc set stepper_x en_spreadcycle=False | autotune_tmc set stepper_x en_spreadcycle=True |
+| autotune_tmc set stepper_x tcoolthrs=391(24.0) | autotune_tmc set stepper_x tcoolthrs=391(24.0) | autotune_tmc set stepper_x tcoolthrs=391(24.0) |
+| autotune_tmc set stepper_x semin=2 | autotune_tmc set stepper_x semin=2 | autotune_tmc set stepper_x semin=2 |
+| autotune_tmc set stepper_x semax=4 | autotune_tmc set stepper_x semax=4 | autotune_tmc set stepper_x semax=4 |
+| autotune_tmc set stepper_x seup=3 | autotune_tmc set stepper_x seup=3 | autotune_tmc set stepper_x seup=3 |
+| autotune_tmc set stepper_x sedn=2 | autotune_tmc set stepper_x sedn=2 | autotune_tmc set stepper_x sedn=2 |
+| autotune_tmc set stepper_x seimin=1 | autotune_tmc set stepper_x seimin=1 | autotune_tmc set stepper_x seimin=1 |
+| autotune_tmc set stepper_x iholddelay=12 | autotune_tmc set stepper_x iholddelay=12 | autotune_tmc set stepper_x iholddelay=12 |
+| autotune_tmc set stepper_x multistep_filt=True | autotune_tmc set stepper_x multistep_filt=True | autotune_tmc set stepper_x multistep_filt=True |
+| autotune_tmc set stepper_y pwm_freq=2 | autotune_tmc set stepper_y pwm_freq=2 | autotune_tmc set stepper_y pwm_freq=2 |
+| autotune_tmc stepper_y ncycles=219 pfdcycles=73 | autotune_tmc stepper_y ncycles=219 pfdcycles=73 | autotune_tmc stepper_y ncycles=219 pfdcycles=73 |
+| autotune_tmc set stepper_y tbl=1 | autotune_tmc set stepper_y tbl=1 | autotune_tmc set stepper_y tbl=1 |
+| autotune_tmc set stepper_y toff=1 | autotune_tmc set stepper_y toff=1 | autotune_tmc set stepper_y toff=1 |
+| autotune_tmc seting hysteresis based on 24.0 V | autotune_tmc seting hysteresis based on 24.0 V | autotune_tmc seting hysteresis based on 24.0 V |
+! dcoilblank = 0.010435, dcoilsd = 0.004006 | dcoilblank = 0.010435, dcoilsd = 0.004006 | dcoilblank = 0.010435, dcoilsd = 0.004006 |
+! hysteresis = -1, htotal = -1, hstrt = 1, hend = -2 | hysteresis = -1, htotal = -1, hstrt = 1, hend = -2 | hysteresis = -1, htotal = -1, hstrt = 1, hend = -2 |
+| autotune_tmc set stepper_y hstrt=0 | autotune_tmc set stepper_y hstrt=0 | autotune_tmc set stepper_y hstrt=0 |
+| autotune_tmc set stepper_y hend=1 | autotune_tmc set stepper_y hend=1 | autotune_tmc set stepper_y hend=1 |
+| autotune_tmc set stepper_y sgthrs=40 | autotune_tmc set stepper_y sgthrs=40 | autotune_tmc set stepper_y sgthrs=40 |
+| autotune_tmc using max PWM speed 171.091564 | autotune_tmc using max PWM speed 171.091564 | autotune_tmc using max PWM speed 171.091564 |
+| autotune_tmc set stepper_y pwm_autoscale=True | autotune_tmc set stepper_y pwm_autoscale=True | autotune_tmc set stepper_y pwm_autoscale=True |
+| autotune_tmc set stepper_y pwm_autograd=True | autotune_tmc set stepper_y pwm_autograd=True | autotune_tmc set stepper_y pwm_autograd=True |
+| autotune_tmc set stepper_y pwm_grad=15 | autotune_tmc set stepper_y pwm_grad=15 | autotune_tmc set stepper_y pwm_grad=15 |
+| autotune_tmc set stepper_y pwm_ofs=40 | autotune_tmc set stepper_y pwm_ofs=40 | autotune_tmc set stepper_y pwm_ofs=40 |
+| autotune_tmc set stepper_y pwm_reg=15 | autotune_tmc set stepper_y pwm_reg=15 | autotune_tmc set stepper_y pwm_reg=15 |
+| autotune_tmc set stepper_y pwm_lim=4 | autotune_tmc set stepper_y pwm_lim=4 | autotune_tmc set stepper_y pwm_lim=4 |
+| autotune_tmc set stepper_y tpwmthrs=1048575 | autotune_tmc set stepper_y tpwmthrs=0 | autotune_tmc set stepper_y tpwmthrs=1048575 |
+| autotune_tmc set stepper_y en_spreadcycle=True | autotune_tmc set stepper_y en_spreadcycle=False | autotune_tmc set stepper_y en_spreadcycle=True |
+| autotune_tmc set stepper_y tcoolthrs=391(24.0) | autotune_tmc set stepper_y tcoolthrs=391(24.0) | autotune_tmc set stepper_y tcoolthrs=391(24.0) |
+| autotune_tmc set stepper_y semin=2 | autotune_tmc set stepper_y semin=2 | autotune_tmc set stepper_y semin=2 |
+| autotune_tmc set stepper_y semax=4 | autotune_tmc set stepper_y semax=4 | autotune_tmc set stepper_y semax=4 |
+| autotune_tmc set stepper_y seup=3 | autotune_tmc set stepper_y seup=3 | autotune_tmc set stepper_y seup=3 |
+| autotune_tmc set stepper_y sedn=2 | autotune_tmc set stepper_y sedn=2 | autotune_tmc set stepper_y sedn=2 |
+| autotune_tmc set stepper_y seimin=1 | autotune_tmc set stepper_y seimin=1 | autotune_tmc set stepper_y seimin=1 |
+| autotune_tmc set stepper_y iholddelay=12 | autotune_tmc set stepper_y iholddelay=12 | autotune_tmc set stepper_y iholddelay=12 |
+| autotune_tmc set stepper_y multistep_filt=True | autotune_tmc set stepper_y multistep_filt=True | autotune_tmc set stepper_y multistep_filt=True |
 
