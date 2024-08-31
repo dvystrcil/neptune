@@ -27,11 +27,11 @@ holding_torque: 0.4
 max_current: 1.20
 steps_per_revolution: 200
 
-[| autotune_tmc stepper_x]
+[ autotune_tmc stepper_x]
 motor: bj42d22-53v04
 tuning_goal: auto
 
-[| autotune_tmc stepper_y]
+[ autotune_tmc stepper_y]
 motor: bj42d22-53v04
 tuning_goal: auto
 ```
