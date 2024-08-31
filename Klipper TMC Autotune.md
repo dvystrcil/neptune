@@ -8,21 +8,32 @@ Read and install: https://github.com/andrewmcgr/klipper_tmc_autotune
 
 ## Configuration
 
-Based on what SilentedFrost has discovered these are some of the attributes of the steppers. I can confirm I am using the BJ42D22-53V04 for the X, assuming the Y will be identical. I will have to find evidence for the others.
+Based on what SilentedFrost has discovered these are some of the attributes of the steppers. I can confirm that I am using the BJ42D22-53V04 for the X, assuming the Y will be identical. I will have to find evidence for the others.
 
 ![image](https://github.com/user-attachments/assets/75a469f6-d764-46fc-84b8-a697ec7c54df)
 
-Some more specs on the steppers: https://www.3djake.com/elegoo/stepper-motor-4
+Specs on the steppers: https://www.3djake.com/elegoo/stepper-motor-4
 
 
 ```ini
+########################################
+# Klipper TMC Autotune configuration
+########################################
+
+[motor_constants BJ42D22-53V04]             ; 1.2A version of the stepper motor
+resistance: 2.1
+inductance: 0.0046
+holding_torque: 0.4
+max_current: 1.20
+steps_per_revolution: 200
+
 [autotune_tmc stepper_x]
-motor: bjd42d22-53v02
-# motor: bj4d22-53v04
+motor: BJ42D22-53V04
+tuning_goal: auto
 
 [autotune_tmc stepper_y]
-motor: bjd42d22-53v02
-# motor: bj4d22-53v04
+motor: BJ42D22-53V04
+tuning_goal: auto
 ```
 
 ## Fixing packages
