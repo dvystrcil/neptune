@@ -36,7 +36,7 @@ motor: BJ42D22-53V04
 tuning_goal: auto
 ```
 
-## Fixing packages
+## Fixing Packages
 
 ### Enum error
 https://github.com/andrewmcgr/klipper_tmc_autotune/issues/40
