@@ -20,7 +20,7 @@ Specs on the steppers: https://www.3djake.com/elegoo/stepper-motor-4
 # Klipper TMC Autotune configuration
 ########################################
 
-[motor_constants BJ42D22-53V04]             ; 1.2A version of the stepper motor
+[motor_constants bj42d22-53v04]             ; 1.2A version of the stepper motor
 resistance: 2.1
 inductance: 0.0046
 holding_torque: 0.4
@@ -28,11 +28,11 @@ max_current: 1.20
 steps_per_revolution: 200
 
 [autotune_tmc stepper_x]
-motor: BJ42D22-53V04
+motor: bj42d22-53v04
 tuning_goal: auto
 
 [autotune_tmc stepper_y]
-motor: BJ42D22-53V04
+motor: bj42d22-53v04
 tuning_goal: auto
 ```
 
