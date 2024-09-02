@@ -4,7 +4,7 @@ Maybe a few cups of coffee.
 
 A danish...
 
-```bash
+```bash filename=update-python.sh
 PY_VERSION=3.12.5
 
 sudo apt update && sudo apt upgrade -y
@@ -26,3 +26,11 @@ rm test.py
 
 cd .. Rm -rf Python-3.1.* sudo aptitude clean
 ```
+
+Run
+```bash
+chmod +x update-python.sh
+sudo ./update-python.sh
+```
+
+
