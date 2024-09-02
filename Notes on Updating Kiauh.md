@@ -1,5 +1,9 @@
 Kiauh v6 needs at least python v3.8. My printer had 3.7... time for some scripting.
 
+Maybe a few cups of coffee.
+
+A danish...
+
 ```bash
 PY_VERSION=3.12.5
 
