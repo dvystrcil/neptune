@@ -34,4 +34,5 @@ sudo ./update-python.sh
 ```
 
 Or not... pyenv seems like a better tool
+https://github.com/pyenv/pyenv
 
