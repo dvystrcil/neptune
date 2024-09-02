@@ -33,4 +33,5 @@ chmod +x update-python.sh
 sudo ./update-python.sh
 ```
 
+Or not... pyenv seems like a better tool
 
