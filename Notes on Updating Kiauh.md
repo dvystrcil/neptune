@@ -17,3 +17,5 @@ curl https://pyenv.run | bash
 ```
 
 https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/7
+
+get python3.10.14
