@@ -16,4 +16,4 @@ https://github.com/pyenv/pyenv
 curl https://pyenv.run | bash
 ```
 
-
+https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/7
