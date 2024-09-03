@@ -1,3 +1,9 @@
+# A word of warning.
+You are entering Linux Contry. Its wild, Its keyboardy, Its not as hard as you think.
+
+It also takes time. 
+
+
 ## Git
 If you are running an older version of git
 ```bash
