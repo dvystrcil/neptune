@@ -34,5 +34,12 @@ sudo ./update-python.sh
 ```
 
 Or not... pyenv seems like a better tool
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt-get install lzma liblzma-dev libbz2-dev
+```
+
+
 https://github.com/pyenv/pyenv
 
