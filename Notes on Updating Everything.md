@@ -21,7 +21,7 @@ Note: Consider the work here at a BETA stage. Use at your own risk. Restoring ca
 - [ ] What happens when you do a firmware update? There are files for Klipper and Moonraker in the extras.
 - [ ] Education. It's OK if you have untracked files reported in Fluidd. You might have installed something like autotune or califlower
 
-Side Note: This effort does not supersede the excellent work being done over on the [OpenNept4une](https://github.com/OpenNeptune3D/OpenNept4une). At some point, the N4 series will be EOL by Elegoo and OpenNept4ne will be the path forward.
+Side Note: This effort does not supersede the excellent work being done over on the [OpenNept4une](https://github.com/OpenNeptune3D/OpenNept4une). At some point, the N4 series will be EOL by Elegoo and OpenNept4une will be the path forward.
 
 ## Step 1) Install the mandatory tools
 https://github.com/dvystrcil/neptune/blob/main/Update%20Utilities.md
