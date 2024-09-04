@@ -12,10 +12,11 @@ sudo apt-get install lzma liblzma-dev libbz2-dev
 This is a very interesting why to install python. Still takes forever but it worked.
 https://github.com/pyenv/pyenv
 
-```
+```bash
 curl https://pyenv.run | bash
+pyenv install 3.10.14
+pyenv global 3.10.14
 ```
 
 https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/7
 
-get python3.10.14
