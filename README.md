@@ -133,11 +133,11 @@ If you are not using the `[adxl345]` or `[resonance_tester]` (only the plus and 
 #### Elegoo's Configuration
 Before you run leveling you must edit elegoo_conf.ini `/home/mks/Desktop/myfile/znp/znp_tjc_klipper/elegoo_conf.ini`
 
-Under [printer_offset]
+Under `[printer_offset]`
 ```ini
 z_offset                       = 0.00
 ```
-Under [level_mode]
+Under `[level_mode]`
 ```ini
 level_points                   = 6
 ```
