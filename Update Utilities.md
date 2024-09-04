@@ -36,13 +36,13 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 ```
-Now you can install whichever version you like:
+Now you can install whichever version you like; however you should strongly consider 3.10.14 (3.12 has breaking changes).
 ```
-pyenv install 3.12.5
+pyenv install 3.10.14
 ```
 wait forever...
 ```bash
-pyenv global 3.12.5
+pyenv global 3.10.14
 ```
 
 ## Git [Optional]
