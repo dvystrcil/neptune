@@ -27,7 +27,7 @@ https://github.com/dvystrcil/neptune/blob/main/Update%20Utilities.md
 ## Step 2) Update Kiauh
 ```bash
 cd ~/kiauh
-pyenv local 3.10.14
+pyenv local 3.10.14 # using the local option will pin it for that folder.
 ./kiauh.sh
 ```
 If it asks you about the new alpha v6 it's safe to try it out. I used it exclusively through this whole exercise.
