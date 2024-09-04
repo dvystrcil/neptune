@@ -16,7 +16,12 @@ https://github.com/pyenv/pyenv
 curl https://pyenv.run | bash
 pyenv install 3.10.14
 pyenv global 3.10.14
+pip3 install --upgrade pip
 ```
 
 https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/7
 
+```bash
+pip3 install --upgrade virtualenv
+virtualenv -p python3 klippy-env
+```
