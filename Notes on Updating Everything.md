@@ -23,10 +23,10 @@ Note: Consider the work here at a BETA stage. Use at your own risk. Restoring ca
 
 Side Note: This effort does not supersede the excellent work being done over on the [OpenNept4une](https://github.com/OpenNeptune3D/OpenNept4une). At some point, the N4 series will be EOL by Elegoo and OpenNept4une will be the path forward.
 
-## Step 1) Install the mandatory tools
+## Step 1: Install the mandatory tools
 https://github.com/dvystrcil/neptune/blob/main/Update%20Utilities.md
 
-## Step 2) Update Kiauh
+## Step 2: Update Kiauh
 ```bash
 cd ~/kiauh
 pyenv local 3.10.14 # using the local option will pin it for that folder.
@@ -34,10 +34,10 @@ pyenv local 3.10.14 # using the local option will pin it for that folder.
 ```
 If it asks you about the new alpha v6 it's safe to try it out. I used it exclusively through this whole exercise.
 
-## Step 3) Update Fluidd
+## Step 3: Update Fluidd
 Do this from Kiauh. No need to wait.
 
-## Step 4) Update Moonraker
+## Step 4: Update Moonraker
 Note: If you have followed my previous guild that installs Krakjoe's repos, you must delete the `.git` folder.
 ```bash
 cd ~/moonraker
@@ -50,16 +50,16 @@ git pull origin master
 ./scripts/data-path-fix.sh
 ```
 
-## Step 5 Update Klipper
+## Step 5: Update Klipper
 
-### Part A Back up your folders
+### Part A: Back up your folders
 ```bash
 cd ~
 sudo mv klipper klipper.bak
 sudo mv klipper-env klipper-env.bak
 ```
 
-### Part B Update the python venv
+### Part B: Update the python venv
 ```bash
 pyenv global 3.10.14
 pip3 install --upgrade pip
@@ -67,7 +67,7 @@ pip3 install --upgrade virtualenv
 virtualenv -p python3 klippy-env
 ```
 
-### Part C Get the latest Klipper
+### Part C: Get the latest Klipper
 ```bash
 cd ~/klipper
 # sudo rm -rf .git # see note
@@ -78,7 +78,7 @@ git reset --hard FETCH_HEAD
 git pull origin master
 ```
 
-### Part D Restore any Elegoo specific files
+### Part D: Restore any Elegoo specific files
 Note: It is still not known if there are more files than these, or even if we need all of them.
 ```bash
 cd ~/klipper.bak
