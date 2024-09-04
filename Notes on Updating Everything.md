@@ -2,6 +2,10 @@
 
 The goal is to bring the N4 series up to date. There are still some outstanding tasks, but it's looking very promising.
 
+Why I chose Kiauh instead of a completely scripted solution is to keep the sources of truth for all these tools. I don't want to document how to install all these parts whole cloth, and maintaining them would be painful. If there are differences, and I expect there will be since many of us have bricked in the past, what are they? If we can understand how Elegoo did things we can repeat them, and perhaps improve on them.
+
+The bottom line, let the contributors of Klipper, Moonraker, Fluidd, and Kiauh do their thing. Our focus is to alter just the bits the printer needs to function.
+
 ![image](https://github.com/user-attachments/assets/e2ce18da-573f-48e7-ba5b-96bbbc1b12ec)
 
 Note: Consider the work here at a BETA stage. Use at your own risk. Restoring can be as simple as coping a folder back.
