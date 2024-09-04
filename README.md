@@ -130,6 +130,21 @@ max_accel_to_decel: 20000
 
 If you are not using the `[adxl345]` or `[resonance_tester]` (only the plus and max have this built in) and you have not added an accellarometer yourself. Then remove these sections from your printer.cfg.
 
+#### Elegoo's Configuration
+Before you run leveling you must edit elegoo_conf.ini `/home/mks/Desktop/myfile/znp/znp_tjc_klipper/elegoo_conf.ini`
+
+Under [printer_offset]
+```ini
+z_offset                       = 0.00
+```
+Under [level_mode]
+```ini
+level_points                   = 6
+```
+This will ensure your G29 (from snippets) macro works; it will cause the Elegoo firmware to load the profile named 6 whenever it loads a profile.
+
+This profile should represent the entire bed, do not use this name for adaptive meshing.
+
 ### Step 3 - Update Moonraker
 
 ```bash
