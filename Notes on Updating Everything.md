@@ -2,6 +2,8 @@
 
 The goal is to bring the N4 series up to date. There are still some outstanding tasks, but it's looking very promising.
 
+Note: Consider the work here at a BETA stage. Use at your own risk. Restoring can be as simple as coping a folder back.
+
 ## Tasks:
 - [x] Update python to 3.12.5
 - [x] Use the alpha Kiauh
