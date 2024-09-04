@@ -4,16 +4,23 @@ You are entering Linux Contry. Its wild, Its keyboardy, Its not as hard as you t
 It also takes time. 
 
 
-## Git
-If you are running an older version of git
-```bash
-git version
-git version 2.20.1
-```
-follow this guide:
-https://www.digitalocean.com/community/tutorials/how-to-install-git-on-debian-10
+## Update Your OS [Mandatory]
 
-## Python3
+Open your `/etc/sources.list` in your favorite editor, and replace this line:
+
+```bash
+deb http://deb.debian.org/debian buster-backports main contrib non-free
+```
+with this:
+```bash
+deb http://archive.debian.org/debian buster-backports main contrib non-free
+```
+
+Then, update your OS
+```bash
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+```
+## Python3 [Mandatory]
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -37,3 +44,14 @@ wait forever...
 ```bash
 pyenv global 3.12.5
 ```
+
+## Git [Optional]
+If you are running an older version of git.
+```bash
+git version
+git version 2.20.1
+```
+follow this guide:
+https://www.digitalocean.com/community/tutorials/how-to-install-git-on-debian-10
+
+You will need about 150MB of drive space. If /tmp is not large enough move the folder over to a partition that has space (what I did).
