@@ -2,6 +2,8 @@
 
 The goal is to bring the N4 series up to date. There are still some outstanding tasks, but it's looking very promising.
 
+![image](https://github.com/user-attachments/assets/e2ce18da-573f-48e7-ba5b-96bbbc1b12ec)
+
 Note: Consider the work here at a BETA stage. Use at your own risk. Restoring can be as simple as coping a folder back.
 
 ## Tasks:
