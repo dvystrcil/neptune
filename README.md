@@ -1,3 +1,6 @@
+# There may be another way...
+https://github.com/dvystrcil/neptune/blob/main/Notes%20on%20Updating%20Everything.md
+
 # How to Update Neptune 4 Using krakjoe's Method
 
 Laying down some expectations... I put this repo together to accomplish a few goals
