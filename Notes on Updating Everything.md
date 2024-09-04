@@ -3,15 +3,15 @@
 The goal is to bring the N4 series up to date. There are still some outstanding tasks, but it's looking very promising.
 
 ## Tasks:
-[x] Update python to 3.12.5
-[x] Use the alpha Kiauh
-[x] Update Fluidd
-[x] Update Moonraker
-[x] Update Klipper
-[ ] See what breaks, document, create patches?
-[ ] What is so Elegoo about the their Klipper?
-[ ] What happens when you do a firmware update? There are files for Klipper and Moonraker in the extras.
-[ ] Education. Its OK if you have untracked files reported in Fluidd. You might have installed something like autotune or califlower
+- [x] Update python to 3.12.5
+- [x] Use the alpha Kiauh
+- [x] Update Fluidd
+- [x] Update Moonraker
+- [x] Update Klipper
+- [ ] See what breaks, document it, and create patches?
+- [ ] What is so Elegoo about the their Klipper?
+- [ ] What happens when you do a firmware update? There are files for Klipper and Moonraker in the extras.
+- [ ] Education. It's OK if you have untracked files reported in Fluidd. You might have installed something like autotune or califlower
 
 ## Step 1) Install the mandatory tools
 https://github.com/dvystrcil/neptune/blob/main/Update%20Utilities.md
