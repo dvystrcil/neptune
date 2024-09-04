@@ -73,7 +73,7 @@ git pull origin master
 ```
 
 ### Part D Restore any Elegoo specific files
-Note: It is still not known if there are more files than these
+Note: It is still not known if there are more files than these, or even if we need all of them.
 ```bash
 cd ~/klipper.bak
 cp -R -u -p . ~/klipper
