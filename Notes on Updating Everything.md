@@ -96,5 +96,6 @@ Other commands are:
 
 ## Post Installation
 - [The Macro max_accel_to_decel Has Been Depricated](https://github.com/dvystrcil/neptune?tab=readme-ov-file#the-macro-max_accel_to_decel-has-been-depricated)
+- [Elegoo's Configuration](https://github.com/dvystrcil/neptune/blob/main/README.md#elegoos-configuration)
 
   
