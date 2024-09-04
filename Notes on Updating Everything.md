@@ -93,3 +93,8 @@ Other commands are:
 - systemctl status klipper
 - sudo systemctl stop klipper
 - sudo systemctl start klipper
+
+## Post Installation
+- [The Macro max_accel_to_decel Has Been Depricated](https://github.com/dvystrcil/neptune?tab=readme-ov-file#the-macro-max_accel_to_decel-has-been-depricated)
+
+  
