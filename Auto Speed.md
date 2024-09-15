@@ -32,3 +32,6 @@ Running AUTO_SPEED
 // Recommended accel: 6471
 // Recommended velocity: 74
 ```
+
+![AUTO_SPEED_GRAPH_2024-09-14_22_30_47_x](https://github.com/user-attachments/assets/1ba282d8-4deb-4506-b64b-6077a71301b1)
+
