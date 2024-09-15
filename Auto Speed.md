@@ -61,6 +61,8 @@ https://github.com/Anonoei/klipper_auto_speed
 // AUTO SPEED found recommended acceleration and velocity after 173.47s
 // | X max: a78350 v1009
 // | Y max: a78350 v772
+// Recommended accel: 78350
+// Recommended velocity: 772
 ```
 
 
