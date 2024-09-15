@@ -4,7 +4,7 @@ Where to find it:
 https://github.com/Anonoei/klipper_auto_speed
 
 
-Running AUTO_SPEED
+Running AUTO_SPEED with Autotune set to `silent`
 
 ```
 // AUTO SPEED found maximum acceleration after 114.36s
