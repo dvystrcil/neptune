@@ -71,3 +71,47 @@ https://www.youtube.com/watch?v=8d49_QUmP9k
 
 ![image](https://github.com/user-attachments/assets/9231bd24-601d-456b-98a0-65afe2eda006)
 
+## Running with Autotune set to `performance` and some different defaults
+
+After talking with SilencedFrost he said the accel wasn't making sense. My numbers were the same as the video, which was odd. I did some poking around and found this issue https://github.com/Anonoei/klipper_auto_speed/issues/25
+
+So I used the same numbers as the person in the issue:
+```config
+[auto_speed]
+margin: 2.5 ; How far away from your axes to perform movements
+accel_min: 1000.0 ; Minimum acceleration test may try
+accel_max: 30000.0 ; Maximum acceleration test may try
+
+velocity_min: 50.0 ; Minimum velocity test may try
+velocity_max: 700.0 ; Maximum velocity test may try
+```
+
+```
+// AUTO SPEED found maximum acceleration after 76.51s
+// | X max: 29395
+// | Y max: 29395
+// 
+// Recommended values:
+// | X max: 23516
+// | Y max: 23516
+```
+```
+// AUTO SPEED found maximum velocity after 77.16s
+// | X max: 686
+// | Y max: 604
+// 
+// Recommended values
+// | X max: 549
+// | Y max: 483
+// Recommended velocity: 483
+```
+```
+// AUTO SPEED found recommended acceleration and velocity after 153.68s
+// | X max: a23516 v549
+// | Y max: a23516 v483
+// Recommended accel: 23516
+// Recommended velocity: 483
+```
+
+The numbers still sound a little suspicious. Shouldn't the velocity be hitting 700, since the uncapped run was at 772?
+
