@@ -48,5 +48,20 @@ Running AUTO_SPEED with Autotune set to `performance`
 // | X max: 78350
 // | Y max: 78350
 ```
+```
+// AUTO SPEED found maximum velocity after 97.30s
+// | X max: 1261
+// | Y max: 965
+// 
+// Recommended values
+// | X max: 1009
+// | Y max: 772
+// Recommended velocity: 772
+```
+```
+// AUTO SPEED found recommended acceleration and velocity after 173.47s
+// | X max: a78350 v1009
+// | Y max: a78350 v772
+```
 
 
