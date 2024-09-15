@@ -64,5 +64,7 @@ https://github.com/Anonoei/klipper_auto_speed
 // Recommended accel: 78350
 // Recommended velocity: 772
 ```
+![image](https://github.com/user-attachments/assets/ef777066-b3a8-4b2d-ac7b-08c165bf6a24)
 
+![image](https://github.com/user-attachments/assets/9231bd24-601d-456b-98a0-65afe2eda006)
 
