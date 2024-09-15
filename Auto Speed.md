@@ -3,6 +3,9 @@
 ## Where to find it:
 https://github.com/Anonoei/klipper_auto_speed
 
+## Some explanation on how to use it:
+https://www.youtube.com/watch?v=8d49_QUmP9k
+
 ## Running AUTO_SPEED with Autotune set to `silent`
 
 ```
