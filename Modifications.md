@@ -14,6 +14,7 @@ A list of all the modifications I have done to my Neptune 4 Pro
 | [Bimetal Nozzle](https://www.amazon.com/dp/B0CKYXZCYC?ref=ppx_yo2ov_dt_b_fed_asin_title) | $9.97 | M | Might be leaving some scaring. It does hold its heat well and I can print PETG-CF without issue. |
 | [USB Hub](https://www.amazon.com/dp/B07L32B9C2?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1) | $9.99 | Y | Needed for expansion. |
 | [Elegoo Harden Steel Nozzel](https://www.amazon.com/dp/B0CY3T6FHC?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1) | $9.99 | N | Doesn't hold the heat well. The Bimetal is performing better. |
+| [Creality A/B Plate](https://www.amazon.com/dp/B0C4NDBY8Z) | $19.99 | Y | Love it. |
 | Axis Locks | 
 | Cable Chains |
 | Filament Feeder |
