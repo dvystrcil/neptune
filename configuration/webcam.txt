@@ -13,7 +13,7 @@
 #
 # Defaults to auto
 #
-camera="usb"
+#camera="auto"
 
 ### Additional options to supply to MJPG Streamer for the USB camera
 #
@@ -21,8 +21,7 @@ camera="usb"
 #
 # Defaults to a resolution of 640x480 px and a framerate of 10 fps
 #
-#camera_usb_options="-d /dev/video0 -r 1920x1080 -f 10"
-camera_usb_options="-r 1920x1080 -f 20 -d /dev/v4l/by-id/usb-046d_HD_Pro_Webcam_C920_ACDB9BBF-video-index0 -vf true"
+camera_usb_options="-d /dev/video4 -r 640x480 -f 10"
 
 ### Additional webcam devices known to cause problems with -f
 #
@@ -70,7 +69,7 @@ camera_usb_options="-r 1920x1080 -f 20 -d /dev/v4l/by-id/usb-046d_HD_Pro_Webcam_
 # Current working directory is the mjpg-streamer base directory.
 #
 #camera_http_webroot="./www-mainsail"
-camera_http_options="-n"
+#camera_http_options="-n"
 
 ### EXPERIMENTAL
 # Support for different streamer types.
