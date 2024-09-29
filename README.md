@@ -1,3 +1,7 @@
+# As of Sept 29th, 2024
+I have switched to OpenNept4une. I will archive a lot of the work I have done here so it's not lost, but it is no longer representative of my printer configuration.
+
+
 # There may be another way...
 https://github.com/dvystrcil/neptune/blob/main/Notes%20on%20Updating%20Everything.md
 
