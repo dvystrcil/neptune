@@ -66,9 +66,9 @@ horizontal_move_z: 2
 [bed_mesh]
 horizontal_move_z: 1
 speed: 400
-mesh_min:15,32           
-mesh_max: 197.94, 203.44 #185,211 
-probe_count: 21, 21
+mesh_min: 15, 31.66 # for N4 Pro
+mesh_max: 198.84, 220.00
+probe_count: 21, 21 # keeping it an odd number will give you a midpoint.
 algorithm: bicubic
 
 [safe_z_home]
