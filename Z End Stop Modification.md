@@ -42,7 +42,7 @@ zero_reference_position: 117.5,117.5
 
 
 ## References
-- https://www.youtube.com/watch?v=Q2uBK5XzX4I
+- https://www.youtube.com/watch?v=Q2uBK5XzX4I Note: this video fails to mention what the zero_reference_position does.
 - https://www.klipper3d.org/G-Codes.html?h=z_offset_app#z_endstop_calibrate
 - https://www.klipper3d.org/G-Codes.html?h=z_offset_app#z_offset_apply_endstop
 - https://www.klipper3d.org/Endstop_Phase.html
