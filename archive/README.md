@@ -65,7 +65,7 @@ So you seem to be someone who likes to type a lot. Fair enough.
 
 Update your sources, because if they are original, it's broken.
 
-Open your `/etc/sources.list` in your favorite editor, and replace this line:
+Open your `/etc/apt/sources.list` in your favorite editor (like nano), and replace this line:
 
 ```bash
 deb http://deb.debian.org/debian buster-backports main contrib non-free
