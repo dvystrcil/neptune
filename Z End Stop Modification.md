@@ -1,6 +1,11 @@
 Notes on how I added a Z endstop to my Neptune 4 Pro. This should be compatible with the non-pro, however, due to the nonexistent off-bed range of the X axis on the Plus and Max a different solution will need to be designed.
 ## Just a brain dump for now
 
+## Limitations
+- If the nozzle is dirty, your offset is not going to be accurate
+- It may be difficult to clean the nozzle without homing first
+- you cannot use bed corners on the same side as the offset end stop
+
 ## Parts
 - [Cable Endstop Mechanical Limit Optical Switch Connection Wire](https://www.amazon.com/gp/product/B0B6FHZLLF) Note: 1M is too long, if you can find even a third of that length it would work.
 - [X/Y/Z Axis End Stop Limit Switch](https://www.amazon.com/gp/product/B098PXX6Q7)
