@@ -15,6 +15,7 @@ A list of all the modifications I have done to my Neptune 4 Pro
 | [USB Hub](https://www.amazon.com/dp/B07L32B9C2?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1) | $9.99 | Y | Needed for expansion. |
 | [Elegoo Harden Steel Nozzel](https://www.amazon.com/dp/B0CY3T6FHC?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1) | $9.99 | N | Doesn't hold the heat well. The Bimetal is performing better. |
 | [Creality A/B Plate](https://www.amazon.com/dp/B0C4NDBY8Z) | $19.99 | Y | Love it. |
+| [z endstop](https://github.com/dvystrcil/neptune/blob/main/Z%20End%20Stop%20Modification.md) | $$ | Y! | Absolutely love it. |
 | Axis Locks | 
 | Cable Chains |
 | Filament Feeder |
