@@ -1,5 +1,7 @@
 Notes on how I added a Z endstop to my Neptune 4 Pro. This should be compatible with the non-pro, however, due to the nonexistent off-bed range of the X axis on the Plus and Max a different solution will need to be designed.
-## Just a brain dump for now
+
+## License
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
 ## Limitations
 - If the nozzle is dirty, your offset is not going to be accurate
