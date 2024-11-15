@@ -11,6 +11,7 @@ Notes on how I added a Z endstop to my Neptune 4 Pro. This should be compatible 
 - [X/Y/Z Axis End Stop Limit Switch](https://www.amazon.com/gp/product/B098PXX6Q7)
 - [2.6x16mm Dowel Pins](https://www.amazon.com/gp/product/B0BCFN4RHN0)
 - [0406 Sleeve Bearings](https://www.amazon.com/gp/product/B0CXXGHT1P)
+- 2 - M3*6 button head screws
 - some screws... 
 
 ## Code
