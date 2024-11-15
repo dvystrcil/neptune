@@ -12,7 +12,7 @@ Notes on how I added a Z endstop to my Neptune 4 Pro. This should be compatible 
 - [2.6x16mm Dowel Pins](https://www.amazon.com/gp/product/B0BCFN4RHN0)
 - [0406 Sleeve Bearings](https://www.amazon.com/gp/product/B0CXXGHT1P)
 - 2 - M3*6 button head screws
-- some screws... 
+- 1 - M4*20 hex head bolt with nut (poor man's t-nut) 
 
 ## Code
 When reading this configs keep in mind that the Pro has a bed size of 235x235 so the center would be 117.5,117.5
@@ -53,6 +53,10 @@ I had to remove the top and both of the bottom panels to route the wire through,
 ![PXL_20241104_022942347](https://github.com/user-attachments/assets/e0b8dcf1-3519-4921-a214-b947d757e708)
 There is a clearance issue that needs to be resolved. In my case, there is no pressure from the arm so the rubbing is minimal.
 ![PXL_20241104_023002523](https://github.com/user-attachments/assets/7a22dc30-36ad-408c-98c2-95be230c4d12)
+
+## On and Off the Plate
+![PXL_20241115_003716392](https://github.com/user-attachments/assets/fe577832-1e0b-485d-a59e-7ee3a4109dd3)
+![PXL_20241115_000939859](https://github.com/user-attachments/assets/8b79132e-35ab-44f0-8ecc-b3f460978c1d)
 
 ## References
 - https://www.youtube.com/watch?v=Q2uBK5XzX4I Note: this video fails to mention what the zero_reference_position does.
