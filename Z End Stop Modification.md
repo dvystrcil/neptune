@@ -12,7 +12,8 @@ Notes on how I added a Z endstop to my Neptune 4 Pro. This should be compatible 
 - [2.6x16mm Dowel Pins](https://www.amazon.com/gp/product/B0BCFN4RHN0)
 - [0406 Sleeve Bearings](https://www.amazon.com/gp/product/B0CXXGHT1P)
 - 2 - M3*6 button head screws
-- 1 - M4*20 hex head bolt with nut (poor man's t-nut) 
+- 1 - M4*20 hex head bolt with nut (poor man's t-nut)
+- [Printable Parts](https://github.com/dvystrcil/neptune/tree/main/stl/z-endstop)
 
 ## Code
 When reading this configs keep in mind that the Pro has a bed size of 235x235 so the center would be 117.5,117.5
