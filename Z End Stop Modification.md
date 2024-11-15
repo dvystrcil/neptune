@@ -55,8 +55,13 @@ There is a clearance issue that needs to be resolved. In my case, there is no pr
 ![PXL_20241104_023002523](https://github.com/user-attachments/assets/7a22dc30-36ad-408c-98c2-95be230c4d12)
 
 ## On and Off the Plate
-![PXL_20241115_003716392](https://github.com/user-attachments/assets/fe577832-1e0b-485d-a59e-7ee3a4109dd3)
+- 0.2 layer height
+- Any filament is OK
+- Brim Type: Mouse ear
+- I used supports: Normal with Snug
+![image](https://github.com/user-attachments/assets/c83d34b6-0ac3-433a-9a41-686fa11b9b04)
 ![PXL_20241115_000939859](https://github.com/user-attachments/assets/8b79132e-35ab-44f0-8ecc-b3f460978c1d)
+![PXL_20241115_003716392](https://github.com/user-attachments/assets/fe577832-1e0b-485d-a59e-7ee3a4109dd3)
 
 ## References
 - https://www.youtube.com/watch?v=Q2uBK5XzX4I Note: this video fails to mention what the zero_reference_position does.
