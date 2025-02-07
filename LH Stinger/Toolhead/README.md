@@ -16,8 +16,12 @@ Elegoo Breakout Board (optional)
 
 Print with PETG, ASA, or ABS 
 
-
+Notes:
+- The LDO and Elegoo breakout board wiring match one for one. The upper two are paired to one coil and the lower two are paired to the other coil.
+- BTT Eddy loctions. Some loss of X on the screw-tilt, I may need to find a better location 
 
 ## What needs to be completed
 - Input Shaping
 - Filament Calibration
+- Set new screw tilt locations
+- Save everything
