@@ -8,11 +8,11 @@ Start...
 - Lose of 
 
 ## BOM
-LDO Oriter v2.x
-TZ V6 2.0
-5015 fans
-4010 fan
-Elegoo Breakout Board (optional)
+- LDO Oriter v2.x
+- [TZ V6 2.0](https://www.aliexpress.us/item/3256808120176947.html)
+- 5015 24v fans - Dual bearing, not hydrolic 
+- 4010 24v fan
+- Elegoo Breakout Board (optional)
 
 Print with PETG, ASA, or ABS 
 
