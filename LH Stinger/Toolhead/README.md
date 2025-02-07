@@ -25,3 +25,6 @@ Notes:
 - Filament Calibration
 - Set new screw tilt locations
 - Save everything
+- Tidy up left side wire harness
+- Reprint purge bucket with 9mm less height
+- Investigate how to add a filament cutter
