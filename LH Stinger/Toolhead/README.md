@@ -12,7 +12,7 @@ Start...
 - [TZ V6 2.0](https://www.aliexpress.us/item/3256808120176947.html)
 - 5015 24v fans - Dual bearing, not hydrolic 
 - 4010 24v fan
-- Elegoo Breakout Board (optional)
+- [Elegoo Breakout Board](https://www.aliexpress.us/item/3256806050452317.html) (optional)
 
 Print with PETG, ASA, or ABS 
 
