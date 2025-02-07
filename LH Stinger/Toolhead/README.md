@@ -18,13 +18,14 @@ Print with PETG, ASA, or ABS
 
 Notes:
 - The LDO and Elegoo breakout board wiring match one for one. The upper two are paired to one coil and the lower two are paired to the other coil.
-- BTT Eddy loctions. Some loss of X on the screw-tilt, I may need to find a better location 
+- BTT Eddy loctions. Some loss of X on the screw-tilt, I may need to find a better location for the Eddy.
 
 ## What needs to be completed
-- Input Shaping
-- Filament Calibration
-- Set new screw tilt locations
-- Save everything
-- Tidy up left side wire harness
-- Reprint purge bucket with 9mm less height
-- Investigate how to add a filament cutter
+- [ ] Input Shaping
+- [ ] Filament Calibration
+- [ ] Set new screw tilt locations
+- [ ] Save everything
+- [ ] Tidy up left side wire harness
+- [ ] Reprint purge bucket with 9mm less height
+- [ ] Investigate how to add a filament cutter
+- [ ] Perhaps reprint in ASA
