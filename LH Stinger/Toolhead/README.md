@@ -29,3 +29,4 @@ Notes:
 - [ ] Reprint purge bucket with 9mm less height
 - [ ] Investigate how to add a filament cutter
 - [ ] Perhaps reprint in ASA
+- [ ] Add some before and after info
